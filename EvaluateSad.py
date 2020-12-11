@@ -5,6 +5,6 @@ CONFIG = 'lookback_rnn'
 
 Teach.evaluate(CONFIG,
                'tmpSad/melody_rnn/logdir/run1',
-               '/tmp/melody_rnn/generatedEVALUATELOOKheheh',
+               '/tmp/melody_rnn/generatedSADLOOKBACK',
                10, 128,
-               64, [128, 128], 60)
+               128, [128, 128], 58)
