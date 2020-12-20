@@ -5,6 +5,8 @@ from PIL import Image, ImageCms
 from DetectColors.testChar import TestChar
 from skimage import io, color
 from DetectColors.Generate import Generate
+from DetectColors.AddChords import Chords
+
 
 def RGB2HEX(color):
     return "#{:02x}{:02x}{:02x}".format(int(color[0]), int(color[1]), int(color[2]))
@@ -173,7 +175,24 @@ if __name__ == '__main__':
         Generate('./models/modelSadLookback_rnn.mag','lookback_rnn').generate()
     else:
         Generate('./models/modelHappyLookback_rnn.mag', 'lookback_rnn').generate()
-    # FIND MAX
+
+    # Zmiana nazwy plikow
+
+    for count, filename in enumerate(os.listdir("F:/tmp/melody_rnn/generatedFromColor/")):
+        dst = "melody" + str(count) + ".mid"
+        src = 'F:/tmp/melody_rnn/generatedFromColor/' + filename
+        dst = 'F:/tmp/melody_rnn/generatedFromColor/' + dst
+
+        # rename() function will
+        # rename all the files
+        os.rename(src, dst)
+
+    # Dodanie akordów
+    for i in range(10):
+        Chords('attention_improv').addChordsHappy('melody'+str(i)+'.mid')
+        # melody5.mid
+
+        # FIND MAX
 
     # maxAcitivty = 0.0
     # minAcitivty = 1000000.0
