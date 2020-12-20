@@ -13,3 +13,5 @@ os.system('melody_rnn_generate \
 --num_outputs=10 \
 --num_steps=128 \
 --primer_melody="[60]"')
+
+
