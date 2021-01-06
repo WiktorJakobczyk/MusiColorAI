@@ -7,14 +7,14 @@ class Generate:
         self.CONFIG=CONFIG
 
 
-    def generate(self):
+    def generate(self, primer):
         os.system('python ../magenta/magenta/models/melody_rnn/melody_rnn_generate.py \
         --config=' + self.CONFIG + ' \
         --bundle_file=' + self.BUNDLE_PATH + ' \
         --output_dir=/tmp/melody_rnn/generatedFromColor \
         --num_outputs=10 \
         --num_steps=128 \
-        --primer_melody="[60]"')
+        --primer_melody='+primer)
 
 
 # <absolute path of .mag file>
