@@ -6,6 +6,7 @@ class EditMidi:
         filelist = [f for f in os.listdir(input) if f]
         for f in filelist:
             print(f)
+            fctr = 1.5 - fctr
             score = music21.converter.parse(input + f)
             newscore = score.scaleOffsets(fctr).scaleDurations(fctr)
             # newscore = score.scaleDurations(fctr)
