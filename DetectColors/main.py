@@ -124,4 +124,4 @@ if __name__ == '__main__':
     # Create mp3/wav with new tempo/low-pass filter
     # TODO: temp and filter
     from DetectColors.EditMid import EditMidi
-    EditMidi.changeTempo(0.75, 'F:/tmp/melody_rnn/generatedFromColor/melody0.mid','edit.mid')   # Trzeba  tu zrobić wszystkie pliki z folderu tego z akordami!
+    EditMidi.changeTempo(0.75, 'F:/tmp/melody_rnn/generatedFromColor/')

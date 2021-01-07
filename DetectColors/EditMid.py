@@ -1,9 +1,12 @@
 import music21
-
+import os
 
 class EditMidi:
-    def changeTempo(self, fctr, input, output): # scale (in this case stretch) the overall tempo by fctr
-        score = music21.converter.Converter()
-        score.parseFile(input)
-        newscore = score.stream.augmentOrDiminish(fctr)
-        newscore.write('midi', output)
+    def changeTempo(self, fctr, input): # scale (in this case stretch) the overall tempo by fctr
+        filelist = [f for f in os.listdir(input) if f]
+        for f in filelist:
+            print(f)
+            score = music21.converter.parse(input + f)
+            newscore = score.scaleOffsets(fctr).scaleDurations(fctr)
+            # newscore = score.scaleDurations(fctr)
+            newscore.write('midi', input + 'edited_' + f)
