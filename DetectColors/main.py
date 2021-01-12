@@ -1,8 +1,7 @@
 import os
-
-from PIL import Image, ImageCms
+from config import *
+from PIL import Image
 from DetectColors.ColorChar import ColorChar
-from skimage import io, color
 from DetectColors.Generate import Generate
 from DetectColors.AddChords import Chords
 from DetectColors.PiePalette import PiePalette
@@ -54,16 +53,16 @@ def getAverageValues():
 
 
 def deleteOldFiles():
-    for count, filename in enumerate(os.listdir("F:/tmp/melody_rnn/generatedFromColor/")):
-        dst = "F:/tmp/melody_rnn/generatedFromColor/melody" + str(count) + ".mid"
+    for count, filename in enumerate(os.listdir(PATH_MELODY)):
+        dst = PATH_MELODY+"melody" + str(count) + ".mid"
         os.remove(dst)
 
 
 def renameFiles():
-    for count, filename in enumerate(os.listdir("F:/tmp/melody_rnn/generatedFromColor/")):
+    for count, filename in enumerate(os.listdir(PATH_MELODY)):
         dst = "melody" + str(count) + ".mid"
-        src = 'F:/tmp/melody_rnn/generatedFromColor/' + filename
-        dst = 'F:/tmp/melody_rnn/generatedFromColor/' + dst
+        src = PATH_MELODY + filename
+        dst = PATH_MELODY + dst
         os.rename(src, dst)
 
 
@@ -114,7 +113,7 @@ if __name__ == '__main__':
     else:
         print(f'HAPPY Colors')
         Generate('./models/modelHappyLookback_rnn.mag', 'lookback_rnn').generate("[65]")
-
+    # TODO: folders
     # Change files names so they will be easier to operate on. e.g 2021-01-06_201919_01.mid to melody0.mid
     renameFiles()
 
@@ -124,4 +123,4 @@ if __name__ == '__main__':
     # Create mp3/wav with new tempo/low-pass filter
     # TODO: temp and filter
     from DetectColors.EditMid import EditMidi
-    EditMidi.changeTempo(0.75, 'F:/tmp/melody_rnn/generatedFromColor/')
+    EditMidi.changeTempo(fctr=0.75, input=PATH_CHORDS)

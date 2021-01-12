@@ -1,5 +1,5 @@
 import os
-
+from config import *
 
 class Generate:
     def __init__(self,BUNDLE_PATH, CONFIG):
@@ -11,7 +11,7 @@ class Generate:
         os.system('python ../magenta/magenta/models/melody_rnn/melody_rnn_generate.py \
         --config=' + self.CONFIG + ' \
         --bundle_file=' + self.BUNDLE_PATH + ' \
-        --output_dir=/tmp/melody_rnn/generatedFromColor \
+        --output_dir='+PATH_MELODY+' \
         --num_outputs=10 \
         --num_steps=128 \
         --primer_melody='+primer)
