@@ -1,3 +1,4 @@
+# DELETE
 import os
 
 # <absolute path of .mag file>
