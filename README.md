@@ -31,9 +31,12 @@ In config.py you can change all path locations. (Make sure you have folders crea
 
 
 ## Training
-Example files can be downloaded from: <br/> https://uniwersytetlodzki-my.sharepoint.com/personal/ul0237241_edu_uni_lodz_pl/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Ful0237241%5Fedu%5Funi%5Flodz%5Fpl%2FDocuments%2FSAD%5FDATA&originalPath=aHR0cHM6Ly91bml3ZXJzeXRldGxvZHpraS1teS5zaGFyZXBvaW50LmNvbS86ZjovZy9wZXJzb25hbC91bDAyMzcyNDFfZWR1X3VuaV9sb2R6X3BsL0VnUWZtVlRSTk4xSmlBTjUzclZhNzhrQjJrQ0VZY01GUkFlU3FpTENHZTBlT3c_cnRpbWU9Mm9SdzJoT3oyRWc
-<br/> (put the files in folders named SAD_DATA in root directory) and <br/> https://uniwersytetlodzki-my.sharepoint.com/personal/ul0237241_edu_uni_lodz_pl/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Ful0237241%5Fedu%5Funi%5Flodz%5Fpl%2FDocuments%2FHAPPY%5FDATA&originalPath=aHR0cHM6Ly91bml3ZXJzeXRldGxvZHpraS1teS5zaGFyZXBvaW50LmNvbS86ZjovZy9wZXJzb25hbC91bDAyMzcyNDFfZWR1X3VuaV9sb2R6X3BsL0V1RmF2ajA2NDBGTHFVUUNoNVVYbmwwQkFyMDhSdi1tNUVQS0tKczZyLWRHdFE_cnRpbWU9Qm1ubzhBNnoyRWc
-<br/>(put the files in folder named HAPPY_DATA in root directory )<br/> 
+Example files can be downloaded from: <br/>
+https://drive.google.com/drive/folders/1tDOsTWOEfweHW34G-9w3ymotE98mDsi0?usp=sharing
+
+<br/> 
+(put folders in the root directory) 
+<br/>
 Run files TeachHappy/Sad and EvaluateHappy/Sad. 
 The first one will train your model, the other one will generate 10 sound files every 15 minutes. 
 When you are done with the training, stop the Teach threads and run file CreateBundle to create file .mag that is used in DetectColors. Put newly trained models inside DetectColors/model and make sure that the names in main.py match. [lines 112,115]
