@@ -1,7 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cb0e8eda-5a0b-4d10-b9ef-e9edc2c767f4" name="Default Changelist" comment="" />
+    <list default="true" id="cb0e8eda-5a0b-4d10-b9ef-e9edc2c767f4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/MusiColorAI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/MusiColorAI.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AddChords.py" beforeDir="false" afterPath="$PROJECT_DIR$/../AddChords.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CreateBundle.py" beforeDir="false" afterPath="$PROJECT_DIR$/../CreateBundle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/DetectColors.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DetectColors.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AddChords.py" beforeDir="false" afterPath="$PROJECT_DIR$/AddChords.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ColorChar.py" beforeDir="false" afterPath="$PROJECT_DIR$/ColorChar.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EditMid.py" beforeDir="false" afterPath="$PROJECT_DIR$/EditMid.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Generate.py" beforeDir="false" afterPath="$PROJECT_DIR$/Generate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PiePalette.py" beforeDir="false" afterPath="$PROJECT_DIR$/PiePalette.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output.flac" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EvaluateHappy.py" beforeDir="false" afterPath="$PROJECT_DIR$/../EvaluateHappy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EvaluateSad.py" beforeDir="false" afterPath="$PROJECT_DIR$/../EvaluateSad.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EvaluateSadPoly.py" beforeDir="false" afterPath="$PROJECT_DIR$/../EvaluateSadPoly.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Generate.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Generate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Teach.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Teach.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TeachHappy.py" beforeDir="false" afterPath="$PROJECT_DIR$/../TeachHappy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TeachSad.py" beforeDir="false" afterPath="$PROJECT_DIR$/../TeachSad.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TeachSadPoly.py" beforeDir="false" afterPath="$PROJECT_DIR$/../TeachSadPoly.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../config.py" beforeDir="false" afterPath="$PROJECT_DIR$/../config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../evaluateSadChords.py" beforeDir="false" afterPath="$PROJECT_DIR$/../evaluateSadChords.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pyvenv.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/../pyvenv.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../teachSadChords.py" beforeDir="false" afterPath="$PROJECT_DIR$/../teachSadChords.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tmpHAPPY/melody_rnn/logdir/run1/train/checkpoint" beforeDir="false" afterPath="$PROJECT_DIR$/../tmpHAPPY/melody_rnn/logdir/run1/train/checkpoint" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tmpHAPPY/melody_rnn/logdir/run1/train/graph.pbtxt" beforeDir="false" afterPath="$PROJECT_DIR$/../tmpHAPPY/melody_rnn/logdir/run1/train/graph.pbtxt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tmpSAD/melody_rnn/logdir/run1/train/checkpoint" beforeDir="false" afterPath="$PROJECT_DIR$/../tmpSAD/melody_rnn/logdir/run1/train/checkpoint" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tmpSAD/melody_rnn/logdir/run1/train/graph.pbtxt" beforeDir="false" afterPath="$PROJECT_DIR$/../tmpSAD/melody_rnn/logdir/run1/train/graph.pbtxt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -98,6 +138,9 @@
       <updated>1610038541423</updated>
       <workItem from="1610038542658" duration="13403000" />
       <workItem from="1610055212909" duration="497000" />
+      <workItem from="1610626692834" duration="5125000" />
+      <workItem from="1610631965804" duration="51000" />
+      <workItem from="1610632061653" duration="29000" />
     </task>
     <servers />
   </component>
@@ -118,6 +161,6 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/DetectColors$Python.coverage" NAME="Python Coverage Results" MODIFIED="1610040004957" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/DetectColors$EditMid.coverage" NAME="EditMid Coverage Results" MODIFIED="1610055579240" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/DetectColors$EditMid.coverage" NAME="EditMid Coverage Results" MODIFIED="1610631984299" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

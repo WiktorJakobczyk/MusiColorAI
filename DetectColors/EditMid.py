@@ -1,33 +1,37 @@
 import music21
 from midi2audio import FluidSynth
-from config import  *
+# from config import  *
 import os
 
-class EditMidi:
-    def changeTempo(fctr, input): # scale (in this case stretch) the overall tempo by fctr
-        filelist = [f for f in os.listdir(input) if f]
-        for f in filelist:
-            print(f)
-            fctr = 1.5 - fctr
-            score = music21.converter.parse(input + f)
-            newscore = score.scaleOffsets(fctr).scaleDurations(fctr)
-            # newscore = score.scaleDurations(fctr)
-            newscore.write('midi', PATH_MUSIC+ 'edited_' + f)
 
-# class EditMidi:
-#     def changeTempo(self, fctr, input, output):  # scale (in this case stretch) the overall tempo by fctr
-#         score = music21.converter.Converter()
-#         score.parseFile(input)
-#         newscore = score.stream.augmentOrDiminish(fctr)
-#         newscore.write('midi', output)
+class EditMid:
+    def __init__(self, input_name,
+                 output_midi_folder='./edited_midi/', output_midi_name='output.mid',
+                 output_flac_folder='./edited_flac/', output_flac_name='output.flac'):
+        self.input_name = input_name
+        self.output_midi_folder = output_midi_folder
+        self.output_flac_folder = output_flac_folder
+        self.output_midi_name = output_midi_name
+        self.output_flac_name = output_flac_name
+        if not os.path.exists(output_midi_folder):
+            os.makedirs(output_midi_folder)
+        if not os.path.exists(output_flac_folder):
+            os.makedirs(output_flac_folder)
+
+    def change_tempo(self, fctr):  # fctr is percentage of input_name tempo, e.g. 120*0.5 = 60, time from 6 sec stretches to 12 secs
+        score = music21.converter.Converter()
+        score.parseFile(self.input_name)
+        newscore = score.stream.augmentOrDiminish(
+            1 / fctr)  # have to inverse fctr, otherwise it will increase tempo instead of decrease and vice versa
+        newscore.write('midi', self.output_midi_folder + self.output_midi_name)
+
+    def export_to_flac(self, soundfont_path):  # works only for FLAC files
+        fs = FluidSynth(soundfont_path)
+        fs.midi_to_audio(self.input_name, self.output_flac_folder + self.output_flac_name)
 
 
-def changeTempoFun(fctr, input_path, output_path):  # scale (in this case stretch) the overall tempo by fctr
-    score = music21.converter.Converter()
-    score.parseFile(input_path)
-    newscore = score.stream.augmentOrDiminish(fctr)
-    newscore.write('midi', output_path)
 
+# EXAMPLE CODE
 
 """
 For make code below work, you need:
@@ -36,18 +40,25 @@ pyfluidsynth: https://pypi.org/project/pyFluidSynth/ or pip install pyfluidsynth
 midi2audio: https://pypi.org/project/midi2audio/ or pip install midi2audio
 """
 
-def exportToFlacFun(soundfont_path, input_path, output_path):    # dziala tylko z rozszerzeniem .flac
-    fs = FluidSynth(sound_font=soundfont_path)
-    fs.midi_to_audio(input_path, output_path)
+# example usage
+# --------------------------------------------------------------------------------
+# create object midi : input file,
+# midi output folder, midi filename,
+# flac output folder, flac filename
+midi = EditMid("input_midi_example_-_Aguado_12valses_Op1_No1.mid",
+                './edited_midi/', 'output.mid',
+                './edited_flac/', 'output.flac')
 
+# change tempo
+tempo = 0.5
+midi.change_tempo(tempo)
 
-# example program
-# usage of changeTempo function
-#tempo = 0.5
-#changeTempoFun(tempo,"input_midi_example_-_Aguado_12valses_Op1_No1.mid","output.mid")
-# export to wav
-# exportToFlacFun('./soundfonts/full_grand_piano.sf2', 'output.mid', 'output.flac')
+# export to flac
+midi.export_to_flac('./soundfonts/full_grand_piano.sf2')
 
 # play midi
-#fs = FluidSynth()
-#fs.play_midi("input_midi_example_-_Aguado_12valses_Op1_No1.mid")
+# Default soundfont should be in C:\Users\[username]\.fluidsynth\default_sound_font.sf2.
+# If it isn't there, just create folder and add any .sf2 file with name 'default_sound_font'
+fs = FluidSynth()
+fs.play_midi("input_midi_example_-_Aguado_12valses_Op1_No1.mid")
+# --------------------------------------------------------------------------------
