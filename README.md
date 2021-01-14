@@ -22,6 +22,13 @@ To create music open folder DetectColors and open file main.py. Create folder na
 and run the program. 
 Your sound file will be created in F:/tmp/music/ready/ 
 In config.py you can change all path locations. (Make sure you have folders created!)
+<br/>
+
+### Project structure
+<br/>
+
+<img src="https://user-images.githubusercontent.com/57060628/104637211-c8e4df80-56a4-11eb-9fa9-94f42f0dd1b4.png" />
+
 
 ## Training
 Example files can be downloaded from: <br/> https://uniwersytetlodzki-my.sharepoint.com/personal/ul0237241_edu_uni_lodz_pl/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Ful0237241%5Fedu%5Funi%5Flodz%5Fpl%2FDocuments%2FSAD%5FDATA&originalPath=aHR0cHM6Ly91bml3ZXJzeXRldGxvZHpraS1teS5zaGFyZXBvaW50LmNvbS86ZjovZy9wZXJzb25hbC91bDAyMzcyNDFfZWR1X3VuaV9sb2R6X3BsL0VnUWZtVlRSTk4xSmlBTjUzclZhNzhrQjJrQ0VZY01GUkFlU3FpTENHZTBlT3c_cnRpbWU9Mm9SdzJoT3oyRWc
