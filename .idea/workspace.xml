@@ -19,44 +19,68 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="818a2494-e273-4fbe-848d-51fc7d957e54" name="Default Changelist" comment="Config.py Teach">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="818a2494-e273-4fbe-848d-51fc7d957e54" name="Default Changelist" comment="Change tempo v0.2">
       <change beforePath="$PROJECT_DIR$/.idea/MusiColorAI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MusiColorAI.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AddChords.py" beforeDir="false" afterPath="$PROJECT_DIR$/AddChords.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CreateBundle.py" beforeDir="false" afterPath="$PROJECT_DIR$/CreateBundle.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DetectColors/.idea/DetectColors.iml" beforeDir="false" afterPath="$PROJECT_DIR$/DetectColors/.idea/DetectColors.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DetectColors/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/DetectColors/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DetectColors/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/DetectColors/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DetectColors/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/DetectColors/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DetectColors/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/DetectColors/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DetectColors/AddChords.py" beforeDir="false" afterPath="$PROJECT_DIR$/DetectColors/AddChords.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DetectColors/ColorChar.py" beforeDir="false" afterPath="$PROJECT_DIR$/DetectColors/ColorChar.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DetectColors/EditMid.py" beforeDir="false" afterPath="$PROJECT_DIR$/DetectColors/EditMid.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DetectColors/Generate.py" beforeDir="false" afterPath="$PROJECT_DIR$/DetectColors/Generate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DetectColors/PiePalette.py" beforeDir="false" afterPath="$PROJECT_DIR$/DetectColors/PiePalette.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DetectColors/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/DetectColors/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EvaluateHappy.py" beforeDir="false" afterPath="$PROJECT_DIR$/EvaluateHappy.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EvaluateSad.py" beforeDir="false" afterPath="$PROJECT_DIR$/EvaluateSad.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EvaluateSadPoly.py" beforeDir="false" afterPath="$PROJECT_DIR$/EvaluateSadPoly.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Generate.py" beforeDir="false" afterPath="$PROJECT_DIR$/Generate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Teach.py" beforeDir="false" afterPath="$PROJECT_DIR$/Teach.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TeachHappy.py" beforeDir="false" afterPath="$PROJECT_DIR$/TeachHappy.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TeachSad.py" beforeDir="false" afterPath="$PROJECT_DIR$/TeachSad.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TeachSadPoly.py" beforeDir="false" afterPath="$PROJECT_DIR$/TeachSadPoly.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/evaluateSadChords.py" beforeDir="false" afterPath="$PROJECT_DIR$/evaluateSadChords.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyvenv.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/pyvenv.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/teachSadChords.py" beforeDir="false" afterPath="$PROJECT_DIR$/teachSadChords.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmpHAPPY/melody_rnn/logdir/run1/train/checkpoint" beforeDir="false" afterPath="$PROJECT_DIR$/tmpHAPPY/melody_rnn/logdir/run1/train/checkpoint" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmpHAPPY/melody_rnn/logdir/run1/train/graph.pbtxt" beforeDir="false" afterPath="$PROJECT_DIR$/tmpHAPPY/melody_rnn/logdir/run1/train/graph.pbtxt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmpSAD/melody_rnn/logdir/run1/train/checkpoint" beforeDir="false" afterPath="$PROJECT_DIR$/tmpSAD/melody_rnn/logdir/run1/train/checkpoint" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmpSAD/melody_rnn/logdir/run1/train/graph.pbtxt" beforeDir="false" afterPath="$PROJECT_DIR$/tmpSAD/melody_rnn/logdir/run1/train/graph.pbtxt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmpHAPPY/melody_rnn/logdir/run1/train/checkpoint" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmpHAPPY/melody_rnn/logdir/run1/train/events.out.tfevents.1608384231.DESKTOP-SIFOA55" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmpHAPPY/melody_rnn/logdir/run1/train/graph.pbtxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmpHAPPY/melody_rnn/logdir/run1/train/model.ckpt-1598.data-00000-of-00001" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmpHAPPY/melody_rnn/logdir/run1/train/model.ckpt-1598.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmpHAPPY/melody_rnn/logdir/run1/train/model.ckpt-1598.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmpHAPPY/melody_rnn/logdir/run1/train/model.ckpt-2406.data-00000-of-00001" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmpHAPPY/melody_rnn/logdir/run1/train/model.ckpt-2406.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmpHAPPY/melody_rnn/logdir/run1/train/model.ckpt-2406.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmpHAPPY/melody_rnn/logdir/run1/train/model.ckpt-3163.data-00000-of-00001" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmpHAPPY/melody_rnn/logdir/run1/train/model.ckpt-3163.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmpHAPPY/melody_rnn/logdir/run1/train/model.ckpt-3163.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmpHAPPY/melody_rnn/logdir/run1/train/model.ckpt-3928.data-00000-of-00001" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmpHAPPY/melody_rnn/logdir/run1/train/model.ckpt-3928.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmpHAPPY/melody_rnn/logdir/run1/train/model.ckpt-3928.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmpHAPPY/melody_rnn/logdir/run1/train/model.ckpt-4692.data-00000-of-00001" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmpHAPPY/melody_rnn/logdir/run1/train/model.ckpt-4692.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmpHAPPY/melody_rnn/logdir/run1/train/model.ckpt-4692.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmpHAPPY/melody_rnn/logdir/run1/train/model.ckpt-5222.data-00000-of-00001" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmpHAPPY/melody_rnn/logdir/run1/train/model.ckpt-5222.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmpHAPPY/melody_rnn/logdir/run1/train/model.ckpt-5222.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmpHAPPY/melody_rnn/logdir/run1/train/model.ckpt-5236.data-00000-of-00001" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmpHAPPY/melody_rnn/logdir/run1/train/model.ckpt-5236.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmpHAPPY/melody_rnn/logdir/run1/train/model.ckpt-5236.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmpHAPPY/melody_rnn/logdir/run1/train/model.ckpt-5250.data-00000-of-00001" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmpHAPPY/melody_rnn/logdir/run1/train/model.ckpt-5250.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmpHAPPY/melody_rnn/logdir/run1/train/model.ckpt-5250.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmpHAPPY/melody_rnn/logdir/run1/train/model.ckpt-5264.data-00000-of-00001" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmpHAPPY/melody_rnn/logdir/run1/train/model.ckpt-5264.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmpHAPPY/melody_rnn/logdir/run1/train/model.ckpt-5264.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmpHAPPY/melody_rnn/logdir/run1/train/model.ckpt-5278.data-00000-of-00001" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmpHAPPY/melody_rnn/logdir/run1/train/model.ckpt-5278.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmpHAPPY/melody_rnn/logdir/run1/train/model.ckpt-5278.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmpHAPPY/melody_rnn/logdir/run1/train/model.ckpt-5292.data-00000-of-00001" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmpHAPPY/melody_rnn/logdir/run1/train/model.ckpt-5292.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmpHAPPY/melody_rnn/logdir/run1/train/model.ckpt-5292.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmpHAPPY/melody_rnn/logdir/run1/train/model.ckpt-5306.data-00000-of-00001" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmpHAPPY/melody_rnn/logdir/run1/train/model.ckpt-5306.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmpHAPPY/melody_rnn/logdir/run1/train/model.ckpt-5306.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmpHAPPY/melody_rnn/logdir/run1/train/model.ckpt-5320.data-00000-of-00001" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmpHAPPY/melody_rnn/logdir/run1/train/model.ckpt-5320.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmpHAPPY/melody_rnn/logdir/run1/train/model.ckpt-5320.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmpHAPPY/melody_rnn/logdir/run1/train/model.ckpt-5334.data-00000-of-00001" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmpHAPPY/melody_rnn/logdir/run1/train/model.ckpt-5334.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmpHAPPY/melody_rnn/logdir/run1/train/model.ckpt-5334.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmpHAPPY/melody_rnn/logdir/run1/train/model.ckpt-5348.data-00000-of-00001" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmpHAPPY/melody_rnn/logdir/run1/train/model.ckpt-5348.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmpHAPPY/melody_rnn/logdir/run1/train/model.ckpt-5348.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmpHAPPY/melody_rnn/logdir/run1/train/model.ckpt-820.data-00000-of-00001" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmpHAPPY/melody_rnn/logdir/run1/train/model.ckpt-820.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmpHAPPY/melody_rnn/logdir/run1/train/model.ckpt-820.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmpHAPPY/melody_rnn/sequence_examples/eval_melodies.tfrecord" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmpHAPPY/melody_rnn/sequence_examples/training_melodies.tfrecord" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmpHAPPY/modelHappyLookback_rnn.mag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmpHAPPY/notesequences.tfrecord" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +126,7 @@
       <recent name="F:\Python\NEW\MusiColorAI\DetectColors\images" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.EditMid">
+  <component name="RunManager" selected="Python.EvaluateSad">
     <configuration name="EditMid" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="MusiColorAI" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -110,13 +134,101 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="F:\Python\MusiColorAI\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DetectColors" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DetectColors/EditMid.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="EvaluateHappy" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="MusiColorAI" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/EvaluateHappy.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="EvaluateSad" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="MusiColorAI" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/EvaluateSad.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TeachHappy" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="MusiColorAI" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TeachHappy.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TeachSad" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="MusiColorAI" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TeachSad.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -149,7 +261,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.EditMid" />
+        <item itemvalue="Python.EvaluateSad" />
+        <item itemvalue="Python.TeachSad" />
+        <item itemvalue="Python.EvaluateHappy" />
+        <item itemvalue="Python.TeachHappy" />
         <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
@@ -165,10 +280,12 @@
       <workItem from="1610038191982" duration="89000" />
       <workItem from="1610471410266" duration="5338000" />
       <workItem from="1610482800199" duration="8000" />
-      <workItem from="1610575505097" duration="3521000" />
-      <workItem from="1610613718555" duration="107000" />
-      <workItem from="1610614123439" duration="5257000" />
-      <workItem from="1610634219248" duration="915000" />
+      <workItem from="1610575505097" duration="3680000" />
+      <workItem from="1610632614330" duration="778000" />
+      <workItem from="1610633402046" duration="1419000" />
+      <workItem from="1610635255755" duration="2149000" />
+      <workItem from="1610642049061" duration="610000" />
+      <workItem from="1610644609388" duration="5434000" />
     </task>
     <task id="LOCAL-00001" summary="Config.py">
       <created>1610478277839</created>
@@ -184,7 +301,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610575976346</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Change tempo v0.2">
+      <created>1610579160801</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1610579160801</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -205,10 +329,58 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Config.py" />
     <MESSAGE value="Config.py Teach" />
-    <option name="LAST_COMMIT_MESSAGE" value="Config.py Teach" />
+    <MESSAGE value="Change tempo v0.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change tempo v0.2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="414" y="175" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1610633455963">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="175" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1610633455963" />
+    <state x="716" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1610634163601">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="716" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1610634163601" />
+    <state x="739" y="275" key="FileChooserDialogImpl" timestamp="1610633490091">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="739" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1610633490091" />
+    <state width="1877" height="256" key="GridCell.Tab.0.bottom" timestamp="1610650626056">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="256" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1610650626056" />
+    <state width="1877" height="256" key="GridCell.Tab.0.center" timestamp="1610650626056">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="256" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1610650626056" />
+    <state width="1877" height="256" key="GridCell.Tab.0.left" timestamp="1610650626056">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="256" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1610650626056" />
+    <state width="1877" height="256" key="GridCell.Tab.0.right" timestamp="1610650626056">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="256" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1610650626056" />
+    <state x="184" y="86" key="MergeDialog" timestamp="1610635279664">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="184" y="86" key="MergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1610635279664" />
+    <state x="461" y="165" key="SettingsEditor" timestamp="1610633547741">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1610633547741" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1610579165057">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1610579165057" />
+    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1610645271956">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1610645271956" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/MusiColorAI$EditMid.coverage" NAME="EditMid Coverage Results" MODIFIED="1610626645828" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DetectColors" />
-    <SUITE FILE_PATH="coverage/MusiColorAI$main.coverage" NAME="main Coverage Results" MODIFIED="1610578875332" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DetectColors" />
+    <SUITE FILE_PATH="coverage/MusiColorAI$EditMid.coverage" NAME="EditMid Coverage Results" MODIFIED="1610633920510" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DetectColors" />
+    <SUITE FILE_PATH="coverage/MusiColorAI$main.coverage" NAME="main Coverage Results" MODIFIED="1610650263801" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DetectColors" />
+    <SUITE FILE_PATH="coverage/MusiColorAI$TeachHappy.coverage" NAME="TeachHappy Coverage Results" MODIFIED="1610650626049" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

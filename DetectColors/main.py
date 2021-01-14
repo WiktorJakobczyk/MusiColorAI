@@ -135,5 +135,5 @@ if __name__ == '__main__':
     import glob
     os.chdir(PATH_CHORDS)
     for file in glob.glob("*.mid"):
-        midi = EditMid(file, PATH_MUSIC, file + 'edited')# po przecinku dopisz folder dla plików flac i nazwy tych plików
-        EditMid.change_tempo(tempo)
+        midi = EditMid(file, PATH_MUSIC, file)# po przecinku dopisz folder dla plików flac i nazwy tych plików
+        midi.change_tempo(tempo,averageWeight)

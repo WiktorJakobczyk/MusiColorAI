@@ -18,11 +18,20 @@ class EditMid:
         if not os.path.exists(output_flac_folder):
             os.makedirs(output_flac_folder)
 
-    def change_tempo(self, fctr):  # fctr is percentage of input_name tempo, e.g. 120*0.5 = 60, time from 6 sec stretches to 12 secs
+    def change_tempo(self, fctr, weight):  # fctr is percentage of input_name tempo, e.g. 120*0.5 = 60, time from 6 sec stretches to 12 secs
         score = music21.converter.Converter()
         score.parseFile(self.input_name)
-        newscore = score.stream.augmentOrDiminish(
-            1 / fctr)  # have to inverse fctr, otherwise it will increase tempo instead of decrease and vice versa
+        weight = 1.5 - weight
+        newscore = score.stream.scaleDurations(
+            1 / fctr).scaleOffsets(weight)  # have to inverse fctr, otherwise it will increase tempo instead of decrease and vice versa
+
+        newscore.write('midi', self.output_midi_folder + self.output_midi_name)
+
+    def change_scale(self, weight):
+        score = music21.converter.Converter()
+        score.parseFile(self.input_name)
+        weight = 1.5 - weight
+        newscore = score.Offsets(weight)
         newscore.write('midi', self.output_midi_folder + self.output_midi_name)
 
     def export_to_flac(self, soundfont_path):  # works only for FLAC files
@@ -51,7 +60,7 @@ midi = EditMid("input_midi_example_-_Aguado_12valses_Op1_No1.mid",
 
 # change tempo
 tempo = 0.5
-midi.change_tempo(tempo)
+# midi.change_tempo(tempo)
 
 # export to flac
 midi.export_to_flac('./soundfonts/full_grand_piano.sf2')
