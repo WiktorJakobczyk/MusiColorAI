@@ -122,12 +122,18 @@ if __name__ == '__main__':
 
     # Create mp3/wav with new tempo/low-pass filter
     # TODO: temp and filter
-    from DetectColors.EditMid import EditMidi
+    from DetectColors.EditMid import EditMid
     # The larger the fctr, the slower the track is
     # averageActivity is 0-1 so to make fctr= 0.5 for 1 and fctr=1.5 for 0
-    tempo=  0.5  # NEEDS TESTS!!!!
+    tempo = 0.5  # NEEDS TESTS!!!!
     print(f'tempo {120/tempo}')   #DEBUG ONLY
     print(f'{120/2}--{120/0.8}')
 
     print(f'tempo {120 / tempo}')  # DEBUG ONLY
-    EditMidi.changeTempo(fctr=tempo, input=PATH_CHORDS)
+
+    # retrieving all files in directory PATH_CHORDS
+    import glob
+    os.chdir(PATH_CHORDS)
+    for file in glob.glob("*.mid"):
+        midi = EditMid(file, PATH_MUSIC, file + 'edited')# po przecinku dopisz folder dla plików flac i nazwy tych plików
+        EditMid.change_tempo(tempo)

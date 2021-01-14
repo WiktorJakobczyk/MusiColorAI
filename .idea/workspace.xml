@@ -19,7 +19,45 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="818a2494-e273-4fbe-848d-51fc7d957e54" name="Default Changelist" comment="Config.py Teach" />
+    <list default="true" id="818a2494-e273-4fbe-848d-51fc7d957e54" name="Default Changelist" comment="Config.py Teach">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/MusiColorAI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MusiColorAI.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AddChords.py" beforeDir="false" afterPath="$PROJECT_DIR$/AddChords.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CreateBundle.py" beforeDir="false" afterPath="$PROJECT_DIR$/CreateBundle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DetectColors/.idea/DetectColors.iml" beforeDir="false" afterPath="$PROJECT_DIR$/DetectColors/.idea/DetectColors.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DetectColors/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/DetectColors/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DetectColors/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/DetectColors/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DetectColors/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/DetectColors/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DetectColors/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/DetectColors/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DetectColors/AddChords.py" beforeDir="false" afterPath="$PROJECT_DIR$/DetectColors/AddChords.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DetectColors/ColorChar.py" beforeDir="false" afterPath="$PROJECT_DIR$/DetectColors/ColorChar.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DetectColors/EditMid.py" beforeDir="false" afterPath="$PROJECT_DIR$/DetectColors/EditMid.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DetectColors/Generate.py" beforeDir="false" afterPath="$PROJECT_DIR$/DetectColors/Generate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DetectColors/PiePalette.py" beforeDir="false" afterPath="$PROJECT_DIR$/DetectColors/PiePalette.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DetectColors/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/DetectColors/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EvaluateHappy.py" beforeDir="false" afterPath="$PROJECT_DIR$/EvaluateHappy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EvaluateSad.py" beforeDir="false" afterPath="$PROJECT_DIR$/EvaluateSad.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EvaluateSadPoly.py" beforeDir="false" afterPath="$PROJECT_DIR$/EvaluateSadPoly.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Generate.py" beforeDir="false" afterPath="$PROJECT_DIR$/Generate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Teach.py" beforeDir="false" afterPath="$PROJECT_DIR$/Teach.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeachHappy.py" beforeDir="false" afterPath="$PROJECT_DIR$/TeachHappy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeachSad.py" beforeDir="false" afterPath="$PROJECT_DIR$/TeachSad.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeachSadPoly.py" beforeDir="false" afterPath="$PROJECT_DIR$/TeachSadPoly.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/evaluateSadChords.py" beforeDir="false" afterPath="$PROJECT_DIR$/evaluateSadChords.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyvenv.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/pyvenv.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/teachSadChords.py" beforeDir="false" afterPath="$PROJECT_DIR$/teachSadChords.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmpHAPPY/melody_rnn/logdir/run1/train/checkpoint" beforeDir="false" afterPath="$PROJECT_DIR$/tmpHAPPY/melody_rnn/logdir/run1/train/checkpoint" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmpHAPPY/melody_rnn/logdir/run1/train/graph.pbtxt" beforeDir="false" afterPath="$PROJECT_DIR$/tmpHAPPY/melody_rnn/logdir/run1/train/graph.pbtxt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmpSAD/melody_rnn/logdir/run1/train/checkpoint" beforeDir="false" afterPath="$PROJECT_DIR$/tmpSAD/melody_rnn/logdir/run1/train/checkpoint" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmpSAD/melody_rnn/logdir/run1/train/graph.pbtxt" beforeDir="false" afterPath="$PROJECT_DIR$/tmpSAD/melody_rnn/logdir/run1/train/graph.pbtxt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -130,6 +168,7 @@
       <workItem from="1610575505097" duration="3521000" />
       <workItem from="1610613718555" duration="107000" />
       <workItem from="1610614123439" duration="5257000" />
+      <workItem from="1610634219248" duration="915000" />
     </task>
     <task id="LOCAL-00001" summary="Config.py">
       <created>1610478277839</created>
