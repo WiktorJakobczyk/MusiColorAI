@@ -110,9 +110,13 @@ if __name__ == '__main__':
     if averageHeat<=0.5:
         print(f'SAD Colors')
         Generate('./models/modelSadLookback_rnn.mag','lookback_rnn').generate("[55]")
+        # Tempo 90-180 BPM
+        tempo = (((averageActivity - 0) * (1.5 - 0.75)) / (1 - 0)) + 0.75
     else:
         print(f'HAPPY Colors')
         Generate('./models/modelHappyLookback_rnn.mag', 'lookback_rnn').generate("[65]")
+        # Tempo 78-144 BPM
+        tempo = (((averageActivity - 0) * (1.2 - 0.65)) / (1 - 0)) + 0.65
     # TODO: folders
     # Change files names so they will be easier to operate on. e.g 2021-01-06_201919_01.mid to melody0.mid
     renameFiles()
@@ -123,9 +127,8 @@ if __name__ == '__main__':
     # Create mp3/wav with new tempo/low-pass filter
     # TODO: temp and filter
     from DetectColors.EditMid import EditMid
-    # The larger the fctr, the slower the track is
-    # averageActivity is 0-1 so to make fctr= 0.5 for 1 and fctr=1.5 for 0
-    tempo = 0.5  # NEEDS TESTS!!!!
+
+
     print(f'tempo {120/tempo}')   #DEBUG ONLY
     print(f'{120/2}--{120/0.8}')
 
