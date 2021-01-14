@@ -47,6 +47,9 @@ When you are done with the training, stop the Teach threads and run file CreateB
 **Matplotlib**: pip install -U matplotlib https://matplotlib.org <br/>
 **Midi2audio**: pip install midi2audio  https://pypi.org/project/midi2audio/ <br/>
 **Music21**: pip install --upgrade music21 http://web.mit.edu/music21/ <br/>
+**fluidsynth(guide)**: https://ksvi.mff.cuni.cz/~dingle/2019/prog_1/python_music.html
+**pyfluidsynth**: pip install pyfluidsynth https://pypi.org/project/pyFluidSynth/ 
+
 	
 ## Technologies
 Project is created with:
