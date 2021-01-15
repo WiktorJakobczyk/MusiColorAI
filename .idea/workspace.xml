@@ -19,8 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="818a2494-e273-4fbe-848d-51fc7d957e54" name="Default Changelist" comment="Training Path fix">
+    <list default="true" id="818a2494-e273-4fbe-848d-51fc7d957e54" name="Default Changelist" comment="Tempo FIX">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DetectColors/EditMid.py" beforeDir="false" afterPath="$PROJECT_DIR$/DetectColors/EditMid.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DetectColors/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/DetectColors/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -97,9 +98,9 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="F:\Python\MusiColorAI\Scripts\python.exe" />
+      <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DetectColors" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
@@ -112,20 +113,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="EvaluateHappy" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="EditMid" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="MusiColorAI" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="SDK_HOME" value="F:\Python\MusiColorAI\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DetectColors" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/EvaluateHappy.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DetectColors/EditMid.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -156,7 +157,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="TeachSad" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="MusiColorAI" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -169,7 +170,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TeachSad.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -203,10 +204,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.Main" />
+        <item itemvalue="Python.EditMid" />
         <item itemvalue="Python.CreateBundle" />
         <item itemvalue="Python.EvaluateSad" />
-        <item itemvalue="Python.TeachSad" />
-        <item itemvalue="Python.EvaluateHappy" />
       </list>
     </recent_temporary>
   </component>
@@ -226,7 +227,7 @@
       <workItem from="1610633402046" duration="1419000" />
       <workItem from="1610635255755" duration="2149000" />
       <workItem from="1610642049061" duration="610000" />
-      <workItem from="1610644609388" duration="9276000" />
+      <workItem from="1610644609388" duration="23168000" />
     </task>
     <task id="LOCAL-00001" summary="Config.py">
       <created>1610478277839</created>
@@ -256,7 +257,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610650991010</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Tempo FIX">
+      <created>1610655784156</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1610655784156</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -279,37 +287,43 @@
     <MESSAGE value="Config.py Teach" />
     <MESSAGE value="Change tempo v0.2" />
     <MESSAGE value="Training Path fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Training Path fix" />
+    <MESSAGE value="Tempo FIX" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tempo FIX" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="175" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1610633455963">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="175" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1610633455963" />
-    <state x="716" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1610634163601">
+    <state x="716" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1610661927248">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="716" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1610661927248" />
     <state x="716" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1610634163601" />
     <state x="739" y="275" key="FileChooserDialogImpl" timestamp="1610633490091">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="739" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1610633490091" />
-    <state width="1877" height="418" key="GridCell.Tab.0.bottom" timestamp="1610655324443">
+    <state width="1858" height="227" key="GridCell.Tab.0.bottom" timestamp="1610669522525">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="418" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1610655324443" />
-    <state width="1877" height="418" key="GridCell.Tab.0.center" timestamp="1610655324443">
+    <state width="1858" height="227" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1610669522525" />
+    <state width="1860" height="227" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1610661519719" />
+    <state width="1858" height="227" key="GridCell.Tab.0.center" timestamp="1610669522524">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="418" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1610655324443" />
-    <state width="1877" height="418" key="GridCell.Tab.0.left" timestamp="1610655324443">
+    <state width="1858" height="227" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1610669522524" />
+    <state width="1860" height="227" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1610661519719" />
+    <state width="1858" height="227" key="GridCell.Tab.0.left" timestamp="1610669522523">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="418" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1610655324443" />
-    <state width="1877" height="418" key="GridCell.Tab.0.right" timestamp="1610655324443">
+    <state width="1858" height="227" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1610669522523" />
+    <state width="1860" height="227" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1610661519719" />
+    <state width="1858" height="227" key="GridCell.Tab.0.right" timestamp="1610669522524">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="418" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1610655324443" />
+    <state width="1858" height="227" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1610669522524" />
+    <state width="1860" height="227" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1610661519719" />
     <state x="184" y="86" key="MergeDialog" timestamp="1610635279664">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -318,19 +332,24 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1610633547741" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1610650994865">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1610655789171">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1610650994865" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1610655789171" />
     <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1610645271956">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1610645271956" />
+    <state x="630" y="229" width="672" height="678" key="search.everywhere.popup" timestamp="1610665032848">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="630" y="229" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1610665032848" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/MusiColorAI$EditMid.coverage" NAME="EditMid Coverage Results" MODIFIED="1610633920510" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DetectColors" />
-    <SUITE FILE_PATH="coverage/MusiColorAI$main.coverage" NAME="main Coverage Results" MODIFIED="1610655324436" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DetectColors" />
+    <SUITE FILE_PATH="coverage/MusiColorAI$EditMid.coverage" NAME="EditMid Coverage Results" MODIFIED="1610665300777" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DetectColors" />
+    <SUITE FILE_PATH="coverage/MusiColorAI$main.coverage" NAME="main Coverage Results" MODIFIED="1610669522517" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DetectColors" />
     <SUITE FILE_PATH="coverage/MusiColorAI$EvaluateSad.coverage" NAME="EvaluateSad Coverage Results" MODIFIED="1610650959850" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MusiColorAI$Main.coverage" NAME="Main Coverage Results" MODIFIED="1610665861869" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MusiColorAI$EvaluateHappy.coverage" NAME="EvaluateHappy Coverage Results" MODIFIED="1610650771097" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MusiColorAI$TeachSad.coverage" NAME="TeachSad Coverage Results" MODIFIED="1610650867550" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MusiColorAI$CreateBundle.coverage" NAME="CreateBundle Coverage Results" MODIFIED="1610654863546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
