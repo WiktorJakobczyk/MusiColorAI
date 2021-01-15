@@ -31,11 +31,11 @@ In config.py you can change all path locations. (Make sure you have folders crea
 
 
 ## Training
-Example files can be downloaded from: <br/>
-https://drive.google.com/drive/folders/1tDOsTWOEfweHW34G-9w3ymotE98mDsi0?usp=sharing
 
-<br/> 
-(put folders in the root directory) 
+Create a folder called HAPPY_DATA and put all your happy midi files there. <br/>
+Do the same with the SAD_DATA directory and the sad midi files. <br/>
+(The HAPPY_DATA and SAD_DATA directories must be in the root directory) <br/>
+
 <br/>
 Run files TeachHappy/Sad and EvaluateHappy/Sad. 
 The first one will train your model, the other one will generate 10 sound files every 15 minutes. 
@@ -47,8 +47,9 @@ When you are done with the training, stop the Teach threads and run file CreateB
 **Matplotlib**: pip install -U matplotlib https://matplotlib.org <br/>
 **Midi2audio**: pip install midi2audio  https://pypi.org/project/midi2audio/ <br/>
 **Music21**: pip install --upgrade music21 http://web.mit.edu/music21/ <br/>
-**fluidsynth(guide)**: https://ksvi.mff.cuni.cz/~dingle/2019/prog_1/python_music.html
-**pyfluidsynth**: pip install pyfluidsynth https://pypi.org/project/pyFluidSynth/ 
+**pyfluidsynth**: pip install pyfluidsynth https://pypi.org/project/pyFluidSynth/  <br/>
+**fluidsynth(guide)**: https://ksvi.mff.cuni.cz/~dingle/2019/prog_1/python_music.html <br/>
+
 
 	
 ## Technologies
