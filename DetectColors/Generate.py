@@ -8,11 +8,11 @@ class Generate:
 
 
     def generate(self, primer):
-        os.system('python ../magenta/magenta/models/melody_rnn/melody_rnn_generate.py \
+        os.system('python F:/Python/NEW/MusiColorAI/magenta/magenta/models/melody_rnn/melody_rnn_generate.py \
         --config=' + self.CONFIG + ' \
         --bundle_file=' + self.BUNDLE_PATH + ' \
         --output_dir='+PATH_MELODY+' \
-        --num_outputs=10 \
+        --num_outputs=1 \
         --num_steps=128 \
         --primer_melody='+primer)
 

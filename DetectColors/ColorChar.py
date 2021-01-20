@@ -18,6 +18,7 @@ class ColorChar:
 
 
     def createChart(self):
+        print('live: '+self.live)
         plt.pie(self.slices,
                 labels=self.live,
                 colors=self.kolory
@@ -25,4 +26,5 @@ class ColorChar:
 
         plt.title("Paleta")
         plt.show()
+        plt.close()
 

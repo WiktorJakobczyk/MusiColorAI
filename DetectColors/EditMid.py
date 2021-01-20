@@ -31,7 +31,7 @@ class EditMid:
         i = music21.interval.Interval(k.tonic, music21.pitch.Pitch(key))
         newscore = newscore.transpose(i)
 
-        newscore.write('midi', self.output_midi_folder+key+'_'+self.output_midi_name)
+        newscore.write('midi', self.output_midi_folder+self.output_midi_name)
 
     def change_scale(self, weight):
         score = music21.converter.Converter()
@@ -46,9 +46,9 @@ class EditMid:
         # //nameFlac=name
         print(f'TO: {name}')
         fs.midi_to_audio(self.input_name, self.output_flac_folder + name + '.flac')
-        if extension == 'wav':
-            os.system('ffmpeg -i' + self.output_flac_folder + name + '.flac ' + self.output_flac_folder + name + '.wav')
-            os.remove(self.output_flac_folder + name + '.flac')
+        #if extension == 'wav':
+          #  os.system('ffmpeg -i' + self.output_flac_folder + name + '.flac ' + self.output_flac_folder + name + '.wav')
+            #os.remove(self.output_flac_folder + name + '.flac')
 
 
 

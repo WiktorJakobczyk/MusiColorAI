@@ -23,6 +23,7 @@ def createPlot(src, rowTitle):
     char = ColorChar(src, rowTitle)
     char.createChart()
 
+
 def getImageEmotions(colours):
     coloursValues = []
     for i in range(len(colours)):
@@ -32,7 +33,7 @@ def getImageEmotions(colours):
     return  coloursValues
 
 
-def getAverageValues():
+def getAverageValues(coloursValues):
     averageActivity_ = 0.0
     averageWeight_ = 0.0
     averageHeat_ = 0.0
@@ -69,30 +70,30 @@ def renameFiles(path,name):
         os.rename(src, dst)
 
 
-def addChords():
+def addChords(averageHeat):
     if averageHeat <= 0.5:
-        for i in range(10):
-            Chords('attention_improv').addChordsSad('melody' + str(i) + '.mid')
+        #for i in range(10):
+            Chords('attention_improv').addChordsSad('melody' + str(0) + '.mid')
     else:
-        for i in range(10):
-            Chords('attention_improv').addChordsHappy('melody' + str(i) + '.mid')
-if __name__ == '__main__':
-
+        #for i in range(10):
+            Chords('attention_improv').addChordsHappy('melody' + str(0) + '.mid')
+#if __name__ == '__main__':
+def music():
 
 
     #  Open img, and get dominant colours from it
     #  Second parameter determines number of colors (default=8)
-    colours = getColorsFromImage("images/image2.jpg")
+    colours = getColorsFromImage("F:/Python/NEW/MusiColorAI/MusiColorFlask/static/uploads/image.jpg")
 
     #  Create a CSV file
     #  It will be used later for drawing a pie plot in ColorChar class.
-    writeToCSV("charts/dataToChartDominate.csv", colours)
+    writeToCSV("F:/Python/NEW/MusiColorAI/DetectColors/charts/dataToChartDominate.csv", colours)
 
     print(colours)  # DEBUG ONLY!!
 
     # Create a plot
     # It helps visualize how image dominant colours looks like
-    createPlot("charts/dataToChartDominate.csv", "color")
+    #createPlot("F:/Python/NEW/MusiColorAI/DetectColors/charts/dataToChartDominate.csv", "color")
 
     # Contains 3 values (activity, weight and heat) for all colours from palette.
     coloursValues = getImageEmotions(colours)
@@ -106,7 +107,7 @@ if __name__ == '__main__':
     # ==============
 
     # Get average values from entire palette
-    averageActivity, averageWeight, averageHeat = getAverageValues()
+    averageActivity, averageWeight, averageHeat = getAverageValues(coloursValues)
 
     # Delete old midis
     deleteOldFiles()
@@ -140,7 +141,7 @@ if __name__ == '__main__':
     # Decide what model should be used based on averageHeat value.
     if averageHeat<=0.5:
         print(f'SAD Colors')
-        Generate('./models/modelSadLookback_rnn.mag','lookback_rnn').generate("[60]")
+        Generate('F:/Python/NEW/MusiColorAI/DetectColors/models/modelSadLookback_rnn.mag','lookback_rnn').generate("[60]")
 
         # Tempo 78-144 BPM
         tempo = (((averageActivity - 0) * (1.2 - 0.65)) / (1 - 0)) + 0.65
@@ -149,7 +150,7 @@ if __name__ == '__main__':
 
     else:
         print(f'HAPPY Colors')
-        Generate('./models/modelHappyLookback_rnn.mag', 'lookback_rnn').generate("[60]")
+        Generate('F:/Python/NEW/MusiColorAI/DetectColors/models/modelHappyLookback_rnn.mag', 'lookback_rnn').generate("[60]")
         # Tempo 90-180 BPM
         tempo = (((averageActivity - 0) * (1.5 - 0.75)) / (1 - 0)) + 0.75
         index = int(averageWeight * 10)
@@ -162,7 +163,7 @@ if __name__ == '__main__':
     renameFiles(PATH_MELODY, 'melody')
 
     # Add chords to generated melodies.
-    addChords()
+    addChords(averageHeat)
 
     renameFiles(PATH_CHORDS, 'chord')
 
@@ -183,11 +184,11 @@ if __name__ == '__main__':
         print(f'file: {file}')
         midi = EditMid(file, PATH_MUSIC, file,PATH_MUSIC) # po przecinku dopisz folder dla plików flac i nazwy tych plików
         midi.change_tempo(fctr=tempo,weight=averageWeight,key=key)
-
     os.chdir(PATH_MUSIC)
     for file in glob.glob("*.mid"):
         midi = EditMid(file, PATH_MUSIC, file, PATH_MUSIC)
         midi.export('F:/Python/NEW/MusiColorAI/DetectColors/soundfonts/full_grand_piano.sf2')
 
     # Delete old midis
-    deleteOldFiles()
+    # deleteOldFiles()
+    return 0

@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Music generated</title>
+  </head>
+  <body>
+    <h1>Music generated</h1>
+
+    <img width="224" height="224" src="http://127.0.0.1:5000/get_image"/>
+
+
+   <audio controls>
+    <source src=" {{ url_for("static", filename = "chord0.flac") }}" type="audio/flac">
+    Your browser does not support the audio element.
+    </audio>
+  </body>
+</html>
