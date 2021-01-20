@@ -40,12 +40,17 @@ class EditMid:
         newscore = score.Offsets(weight)
         newscore.write('midi', self.output_midi_folder + self.output_midi_name)
 
-    def export_to_flac(self, soundfont_path):  # works only for FLAC files
+    def export(self, soundfont_path, extension='wav'):  # works only for FLAC & WAV files
         fs = FluidSynth(soundfont_path)
         name=self.input_name[:-4]
         # //nameFlac=name
         print(f'TO: {name}')
-        fs.midi_to_audio(self.input_name, self.output_flac_folder +name+'.flac')
+        fs.midi_to_audio(self.input_name, self.output_flac_folder + name + '.flac')
+        if extension == 'wav':
+            os.system('ffmpeg -i' + self.output_flac_folder + name + '.flac ' + self.output_flac_folder + name + '.wav')
+            os.remove(self.output_flac_folder + name + '.flac')
+
+
 
 
 
@@ -56,5 +61,6 @@ For make code below work, you need:
 fluidsynth(guide): https://ksvi.mff.cuni.cz/~dingle/2019/prog_1/python_music.html
 pyfluidsynth: https://pypi.org/project/pyFluidSynth/ or pip install pyfluidsynth
 midi2audio: https://pypi.org/project/midi2audio/ or pip install midi2audio
+ffmpeg required: https://ffmpeg.org/
 """
 

@@ -187,7 +187,7 @@ if __name__ == '__main__':
     os.chdir(PATH_MUSIC)
     for file in glob.glob("*.mid"):
         midi = EditMid(file, PATH_MUSIC, file, PATH_MUSIC)
-        midi.export_to_flac('F:/Python/NEW/MusiColorAI/DetectColors/soundfonts/full_grand_piano.sf2')
+        midi.export('F:/Python/NEW/MusiColorAI/DetectColors/soundfonts/full_grand_piano.sf2')
 
     # Delete old midis
     deleteOldFiles()
