@@ -9,6 +9,7 @@ app = Flask(__name__)
 app.config['MAX_CONTENT_LENGTH'] = 2 * 1024 * 1024
 app.config['UPLOAD_EXTENSIONS'] = ['.jpg', '.png', '.gif']
 app.config['UPLOAD_PATH'] = 'F:/Python/NEW/MusiColorAI/MusiColorFlask/static/uploads'
+app.config['MUSIC_PATH'] = 'F:/Python/NEW/MusiColorAI/MusiColorFlask/static/'
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
 def validate_image(stream):
@@ -54,13 +55,12 @@ def upload_files():
 
     #file = open(r'F:\Python\NEW\MusiColorAI\MusiColorFlask\test.py', 'r').read()
     #exec(file)
-
     music.music()
-
-
     return render_template('result.html')
 
 
+# DELETE THIS
+############################
 @app.route("/wav")
 def streamwav():
     def generate():
@@ -71,12 +71,17 @@ def streamwav():
                 data = fwav.read(1024)
 
     return Response(generate(), mimetype="audio/x-wav")
+############################
 
-
+@app.route('/getmusic')
+def getMusic():
+    return send_from_directory(app.config['MUSIC_PATH'], 'chord0.flac',cache_timeout=0)
 
 @app.route('/uploads/<filename>')
 def upload(filename):
+
     return send_from_directory(app.config['UPLOAD_PATH'], filename)
+
 
 if __name__ == "__main__":
     app.run(debug=True)
