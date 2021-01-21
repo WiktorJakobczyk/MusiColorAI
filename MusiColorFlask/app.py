@@ -39,6 +39,7 @@ def too_large(e):
 
 @app.route('/')
 def index():
+    music.makeDirFromRelative(app.config['UPLOAD_PATH'])
     files = os.listdir(app.config['UPLOAD_PATH'])
     return render_template('index.html', files=files)
 
