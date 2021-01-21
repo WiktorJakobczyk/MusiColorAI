@@ -5,10 +5,12 @@ from flask import Flask, render_template, request, redirect, url_for, abort, \
     send_from_directory, Response
 from werkzeug.utils import secure_filename
 import DetectColors.main as music
+import uuid
+
 app = Flask(__name__)
 app.config['MAX_CONTENT_LENGTH'] = 2 * 1024 * 1024
 app.config['UPLOAD_EXTENSIONS'] = ['.jpg', '.png', '.gif']
-app.config['UPLOAD_PATH'] = 'F:/Python/NEW/MusiColorAI/MusiColorFlask/static/uploads'
+app.config['UPLOAD_PATH'] = 'F:/Python/NEW/MusiColorAI/MusiColorFlask/static/uploads/'
 app.config['MUSIC_PATH'] = 'F:/Python/NEW/MusiColorAI/MusiColorFlask/static/'
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
@@ -42,7 +44,8 @@ def index():
 
 @app.route('/', methods=['POST'])
 def upload_files():
-    os.remove(app.config['UPLOAD_PATH']+'/image.jpg',)
+    generatedName = str(uuid.uuid4())
+    os.mkdir(app.config['MUSIC_PATH']+generatedName)
 
     uploaded_file = request.files['file']
     filename = secure_filename(uploaded_file.filename)
@@ -51,13 +54,13 @@ def upload_files():
         if file_ext not in app.config['UPLOAD_EXTENSIONS'] or \
                 file_ext != validate_image(uploaded_file.stream):
             return "Invalid image", 400
-        uploaded_file.save(os.path.join(app.config['UPLOAD_PATH'], 'image' + file_ext))
+        uploaded_file.save(os.path.join(app.config['UPLOAD_PATH'], generatedName + file_ext))
 
     #file = open(r'F:\Python\NEW\MusiColorAI\MusiColorFlask\test.py', 'r').read()
     #exec(file)
-    music.music()
-    return render_template('result.html')
-
+    averageHeat, averageActivity, averageActivity=music.music(generatedName)
+    return render_template('result.html', flac_name=generatedName, data=[averageHeat, averageActivity, averageActivity])
+    #return "GIT", 200
 
 # DELETE THIS
 ############################
@@ -73,9 +76,13 @@ def streamwav():
     return Response(generate(), mimetype="audio/x-wav")
 ############################
 
-@app.route('/getmusic')
-def getMusic():
-    return send_from_directory(app.config['MUSIC_PATH'], 'chord0.flac',cache_timeout=0)
+@app.route('/getmusic/<filename>')
+def getMusic(filename):
+    return send_from_directory(app.config['MUSIC_PATH']+filename, filename+'.flac', cache_timeout=0)
+
+@app.route('/getplot/<filename>')
+def getPlot(filename):
+    return send_from_directory(app.config['MUSIC_PATH']+filename, 'plot.png', cache_timeout=0)
 
 @app.route('/uploads/<filename>')
 def upload(filename):

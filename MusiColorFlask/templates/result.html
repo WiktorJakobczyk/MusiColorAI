@@ -6,12 +6,17 @@
   <body>
     <h1>Music generated</h1>
 
-    <img width="224" height="224" src="http://127.0.0.1:5000/uploads/image.jpg"/>
+    <img width="224" height="224" src="http://127.0.0.1:5000/uploads/{{flac_name}}.jpg"/>
 
 
    <audio controls>
-    <source src="http://127.0.0.1:5000/getmusic" type="audio/flac">
+    <source src="http://127.0.0.1:5000/getmusic/{{flac_name}}" type="audio/flac">
     Your browser does not support the audio element.
     </audio>
+
+    <img  src="http://127.0.0.1:5000/getplot/{{flac_name}}"/>
+  <label>Heat: {{data[0]}}</label>
+   <label>Activity: {{data[1]}}</label>
+   <label>Weight: {{data[2]}}</label>
   </body>
 </html>

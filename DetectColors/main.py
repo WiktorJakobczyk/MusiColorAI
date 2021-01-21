@@ -1,4 +1,6 @@
 import os
+import shutil
+
 from config import *
 from PIL import Image
 from DetectColors.ColorChar import ColorChar
@@ -19,9 +21,10 @@ def writeToCSV(csvSrc, coloursToGetData):
     f.close()
 
 
-def createPlot(src, rowTitle):
+def createPlot(src, rowTitle, ID):
     char = ColorChar(src, rowTitle)
-    char.createChart()
+    char.createChart(ID)
+
 
 
 def getImageEmotions(colours):
@@ -53,14 +56,17 @@ def getAverageValues(coloursValues):
     return averageActivity_, averageWeight_, averageHeat_
 
 
-def deleteOldFiles():
+def deleteOldFiles(name):
     for count, filename in enumerate(os.listdir(PATH_MELODY)):
         dst = PATH_MELODY+"melody" + str(count) + ".mid"
         os.remove(dst)
     for count, filename in enumerate(os.listdir(PATH_CHORDS)):
         dst = PATH_CHORDS+"chord" + str(count) + ".mid"
         os.remove(dst)
-
+def deleteOldDirectories(dirName):
+    shutil.rmtree(PATH_MELODY+dirName)
+    shutil.rmtree(PATH_CHORDS+dirName)
+    shutil.rmtree("F:/Python/NEW/MusiColorAI/DetectColors/charts/"+dirName)
 
 def renameFiles(path,name):
     for count, filename in enumerate(os.listdir(path)):
@@ -70,30 +76,31 @@ def renameFiles(path,name):
         os.rename(src, dst)
 
 
-def addChords(averageHeat):
+def addChords(averageHeat,generatedName):
     if averageHeat <= 0.5:
         #for i in range(10):
-            Chords('attention_improv').addChordsSad('melody' + str(0) + '.mid')
+            Chords('attention_improv').addChordsSad('melody' + str(0) + '.mid',generatedName)
     else:
         #for i in range(10):
-            Chords('attention_improv').addChordsHappy('melody' + str(0) + '.mid')
+            Chords('attention_improv').addChordsHappy('melody' + str(0) + '.mid',generatedName)
 #if __name__ == '__main__':
-def music():
+def music(generatedName):
 
 
     #  Open img, and get dominant colours from it
     #  Second parameter determines number of colors (default=8)
-    colours = getColorsFromImage("F:/Python/NEW/MusiColorAI/MusiColorFlask/static/uploads/image.jpg")
+    colours = getColorsFromImage("F:/Python/NEW/MusiColorAI/MusiColorFlask/static/uploads/"+generatedName+'.jpg')
 
     #  Create a CSV file
     #  It will be used later for drawing a pie plot in ColorChar class.
-    writeToCSV("F:/Python/NEW/MusiColorAI/DetectColors/charts/dataToChartDominate.csv", colours)
+    os.mkdir("F:/Python/NEW/MusiColorAI/DetectColors/charts/"+generatedName)
+    writeToCSV("F:/Python/NEW/MusiColorAI/DetectColors/charts/"+generatedName+"/dataToChartDominate.csv", colours)
 
     print(colours)  # DEBUG ONLY!!
 
     # Create a plot
     # It helps visualize how image dominant colours looks like
-    #createPlot("F:/Python/NEW/MusiColorAI/DetectColors/charts/dataToChartDominate.csv", "color")
+    createPlot("F:/Python/NEW/MusiColorAI/DetectColors/charts/"+generatedName+"/dataToChartDominate.csv", "color",generatedName)
 
     # Contains 3 values (activity, weight and heat) for all colours from palette.
     coloursValues = getImageEmotions(colours)
@@ -110,7 +117,7 @@ def music():
     averageActivity, averageWeight, averageHeat = getAverageValues(coloursValues)
 
     # Delete old midis
-    deleteOldFiles()
+    #deleteOldFiles()
 
     # HAPPY:
     # 1-0.9 C4
@@ -141,7 +148,7 @@ def music():
     # Decide what model should be used based on averageHeat value.
     if averageHeat<=0.5:
         print(f'SAD Colors')
-        Generate('F:/Python/NEW/MusiColorAI/DetectColors/models/modelSadLookback_rnn.mag','lookback_rnn').generate("[60]")
+        Generate('F:/Python/NEW/MusiColorAI/DetectColors/models/modelSadLookback_rnn.mag','lookback_rnn').generate("[60]",generatedName)
 
         # Tempo 78-144 BPM
         tempo = (((averageActivity - 0) * (1.2 - 0.65)) / (1 - 0)) + 0.65
@@ -150,7 +157,7 @@ def music():
 
     else:
         print(f'HAPPY Colors')
-        Generate('F:/Python/NEW/MusiColorAI/DetectColors/models/modelHappyLookback_rnn.mag', 'lookback_rnn').generate("[60]")
+        Generate('F:/Python/NEW/MusiColorAI/DetectColors/models/modelHappyLookback_rnn.mag', 'lookback_rnn').generate("[60]",generatedName)
         # Tempo 90-180 BPM
         tempo = (((averageActivity - 0) * (1.5 - 0.75)) / (1 - 0)) + 0.75
         index = int(averageWeight * 10)
@@ -160,12 +167,12 @@ def music():
 
     # TODO: folders
     # Change files names so they will be easier to operate on. e.g 2021-01-06_201919_01.mid to melody0.mid
-    renameFiles(PATH_MELODY, 'melody')
+    renameFiles(PATH_MELODY+generatedName+"/", 'melody')
 
     # Add chords to generated melodies.
-    addChords(averageHeat)
+    addChords(averageHeat,generatedName)
 
-    renameFiles(PATH_CHORDS, 'chord')
+    renameFiles(PATH_CHORDS+generatedName+"/", 'chord')
 
     # Create mp3/wav with new tempo/low-pass filter
     # TODO: temp and filter
@@ -179,16 +186,16 @@ def music():
 
     # retrieving all files in directory PATH_CHORDS
     import glob
-    os.chdir(PATH_CHORDS)
+    os.chdir(PATH_CHORDS+generatedName+"/")
     for file in glob.glob("*.mid"):
         print(f'file: {file}')
-        midi = EditMid(file, PATH_MUSIC, file,PATH_MUSIC) # po przecinku dopisz folder dla plików flac i nazwy tych plików
+        midi = EditMid(file, PATH_MUSIC+generatedName+"/", file,PATH_MUSIC+generatedName+"/") # po przecinku dopisz folder dla plików flac i nazwy tych plików
         midi.change_tempo(fctr=tempo,weight=averageWeight,key=key)
-    os.chdir(PATH_MUSIC)
+    os.chdir(PATH_MUSIC+generatedName+"/")
     for file in glob.glob("*.mid"):
-        midi = EditMid(file, PATH_MUSIC, file, PATH_MUSIC)
-        midi.export('F:/Python/NEW/MusiColorAI/DetectColors/soundfonts/full_grand_piano.sf2')
+        midi = EditMid(file, PATH_MUSIC+"/"+generatedName, file, PATH_MUSIC+"/")
+        midi.export('F:/Python/NEW/MusiColorAI/DetectColors/soundfonts/full_grand_piano.sf2',PATH_MUSIC+"/"+generatedName+"/", generatedName)
 
-    # Delete old midis
-    # deleteOldFiles()
-    return 0
+    # Delete temp dir
+    deleteOldDirectories(generatedName)
+    return averageHeat,averageActivity,averageActivity

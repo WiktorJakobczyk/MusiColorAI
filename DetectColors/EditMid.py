@@ -40,12 +40,12 @@ class EditMid:
         newscore = score.Offsets(weight)
         newscore.write('midi', self.output_midi_folder + self.output_midi_name)
 
-    def export(self, soundfont_path, extension='wav'):  # works only for FLAC & WAV files
+    def export(self, soundfont_path,output,name, extension='wav'):  # works only for FLAC & WAV files
         fs = FluidSynth(soundfont_path)
-        name=self.input_name[:-4]
-        # //nameFlac=name
+        #name=self.input_name
+        #//nameFlac=name
         print(f'TO: {name}')
-        fs.midi_to_audio(self.input_name, self.output_flac_folder + name + '.flac')
+        fs.midi_to_audio(self.input_name, output + name + '.flac')
         #if extension == 'wav':
           #  os.system('ffmpeg -i' + self.output_flac_folder + name + '.flac ' + self.output_flac_folder + name + '.wav')
             #os.remove(self.output_flac_folder + name + '.flac')
