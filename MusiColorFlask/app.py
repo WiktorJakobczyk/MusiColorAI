@@ -1,4 +1,3 @@
-from DetectColors import main
 import imghdr
 import os
 from flask import Flask, render_template, request, redirect, url_for, abort, \
@@ -10,8 +9,10 @@ import uuid
 app = Flask(__name__)
 app.config['MAX_CONTENT_LENGTH'] = 2 * 1024 * 1024
 app.config['UPLOAD_EXTENSIONS'] = ['.jpg', '.png', '.gif']
-app.config['UPLOAD_PATH'] = 'F:/Python/NEW/MusiColorAI/MusiColorFlask/static/uploads/'
-app.config['MUSIC_PATH'] = 'F:/Python/NEW/MusiColorAI/MusiColorFlask/static/'
+#app.config['UPLOAD_PATH'] = 'F:/Python/NEW/MusiColorAI/MusiColorFlask/static/uploads/'
+app.config['UPLOAD_PATH'] = './static/uploads/'
+#app.config['MUSIC_PATH'] = 'F:/Python/NEW/MusiColorAI/MusiColorFlask/static/'
+app.config['MUSIC_PATH'] = './static/'
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
 def validate_image(stream):

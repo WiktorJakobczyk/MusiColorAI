@@ -8,7 +8,8 @@ class Generate:
 
 
     def generate(self, primer, output):
-        os.system('python F:/Python/NEW/MusiColorAI/magenta/magenta/models/melody_rnn/melody_rnn_generate.py \
+        #os.system('python F:/Python/NEW/MusiColorAI/magenta/magenta/models/melody_rnn/melody_rnn_generate.py \
+        os.system('python ../magenta/magenta/models/melody_rnn/melody_rnn_generate.py \
         --config=' + self.CONFIG + ' \
         --bundle_file=' + self.BUNDLE_PATH + ' \
         --output_dir='+PATH_MELODY+output+"/"+' \

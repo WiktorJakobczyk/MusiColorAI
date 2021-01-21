@@ -4,3 +4,9 @@
 /magenta/
 /HAPPY_DATA/
 /MusiColorFlask/.idea/
+/MusiColorFlask/charts/
+/MusiColorFlask/static/
+/MusiColorFlask/tmp/
+/__pycache__/
+/.idea/
+/DetectColors/__pycache__/
