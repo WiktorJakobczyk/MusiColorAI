@@ -1,3 +1,4 @@
+![logo](https://user-images.githubusercontent.com/57060628/105486374-aa877100-5cae-11eb-8131-885d0fdeb2f7.png)
 ## MusiColor
 This project is meant to create music from emotions that can be triggered by colours of a picture. It uses 2 models that can by trained; one is for sad music and the other is for happy music. Every image colours palette is specified by 3 values:
 Activity- means how vivid the colours are
