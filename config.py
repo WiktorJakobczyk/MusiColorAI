@@ -5,6 +5,7 @@ PATH_CHORDS = "./tmp/improv_rnn/generatedFromColorCHORDS2/"
 #PATH_MUSIC = "F:/tmp/music/ready/"
 #PATH_MUSIC = "F:/Python/NEW/MusiColorAI/MusiColorFlask/static/"
 PATH_MUSIC = "../MusiColorFlask/static/"
+PATH_MUSIC2 = "../../../../../MusiColorFlask/static/"
 # Teaching
 #PATH_SAD_EVALUATE="F:/tmp/evaluate/SAD/"
 PATH_SAD_EVALUATE="./tmp/evaluate/SAD/"

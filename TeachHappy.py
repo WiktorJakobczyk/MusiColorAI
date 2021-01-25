@@ -5,10 +5,10 @@ import Teach
 CONFIG = 'lookback_rnn'
 
 
-Teach.createNoteSequences("HAPPY_DATA", "tmpHAPPY/notesequences.tfrecord")
+# Teach.createNoteSequences("HAPPY_DATA", "tmpHAPPY/notesequences.tfrecord")
 
-Teach.createSequenceExamples(CONFIG, 'tmpHAPPY/notesequences.tfrecord', 'tmpHAPPY/melody_rnn/sequence_examples',0.1)
-
+# Teach.createSequenceExamples(CONFIG, 'tmpHAPPY/notesequences.tfrecord', 'tmpHAPPY/melody_rnn/sequence_examples',0.1)
+#
 Teach.train(CONFIG,
               'tmpHAPPY/melody_rnn/logdir/run1',
               'tmpHAPPY/melody_rnn/sequence_examples/training_melodies.tfrecord',

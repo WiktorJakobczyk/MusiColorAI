@@ -37,6 +37,15 @@ def train(config,run_dir,sequence_example_file,batch_size,rnn_layer_sizes,num_tr
     --hparams="batch_size='+str(batch_size)+',rnn_layer_sizes=['+str(rnn_layer_sizes[0])+','+str(rnn_layer_sizes[1])+']" \
     --num_training_steps='+str(num_training_steps))
 
+def trainEval(config,run_dir,sequence_example_file,batch_size,rnn_layer_sizes,num_training_steps):
+    os.system('python magenta/magenta/models/melody_rnn/melody_rnn_train.py \
+    --config='+config+' \
+    --run_dir='+run_dir+' \
+    --sequence_example_file='+sequence_example_file+' \
+    --hparams="batch_size='+str(batch_size)+',rnn_layer_sizes=['+str(rnn_layer_sizes[0])+','+str(rnn_layer_sizes[1])+']" \
+    --num_training_steps='+str(num_training_steps)+'\
+    --eval')
+
 def trainPoly(config,run_dir,sequence_example_file,batch_size,rnn_layer_sizes,num_training_steps):
     os.system('python magenta/magenta/models/polyphony_rnn/polyphony_rnn_train.py \
     --run_dir='+run_dir+' \

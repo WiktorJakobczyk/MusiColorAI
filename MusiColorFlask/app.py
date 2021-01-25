@@ -5,8 +5,10 @@ from flask import Flask, render_template, request, redirect, url_for, abort, \
 from werkzeug.utils import secure_filename
 import DetectColors.main as music
 import uuid
+from flask_bootstrap import Bootstrap
 
 app = Flask(__name__)
+Bootstrap(app)
 app.config['MAX_CONTENT_LENGTH'] = 2 * 1024 * 1024
 app.config['UPLOAD_EXTENSIONS'] = ['.jpg', '.png', '.gif']
 #app.config['UPLOAD_PATH'] = 'F:/Python/NEW/MusiColorAI/MusiColorFlask/static/uploads/'

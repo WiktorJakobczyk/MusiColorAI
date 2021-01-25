@@ -80,10 +80,10 @@ def renameFiles(path,name):
 def addChords(averageHeat,generatedName):
     if averageHeat <= 0.5:
         #for i in range(10):
-            Chords('attention_improv').addChordsSad('melody' + str(0) + '.mid',generatedName)
+            Chords('attention_improv').addChordsSad('/'+generatedName+'/melody' + str(0) + '.mid',generatedName)
     else:
         #for i in range(10):
-            Chords('attention_improv').addChordsHappy('melody' + str(0) + '.mid',generatedName)
+            Chords('attention_improv').addChordsHappy('/'+generatedName+'/melody' + str(0) + '.mid',generatedName)
 
 
 def makeDirFromRelative(relative_path):
@@ -165,7 +165,8 @@ def music(generatedName):
     if averageHeat<=0.5:
         print(f'SAD Colors')
         #Generate('F:/Python/NEW/MusiColorAI/DetectColors/models/modelSadLookback_rnn.mag','lookback_rnn').generate("[60]",generatedName)
-        Generate('../DetectColors/models/modelSadLookback_rnn.mag', 'lookback_rnn').generate("[60]", generatedName)
+        #Generate('../DetectColors/models/modelSadLookback_rnn.mag', 'lookback_rnn').generate("[60]", generatedName)
+        Generate('../DetectColors/models/attention_rnn.mag', 'lookback_rnn').generate("[60]", generatedName)
 
         # Tempo 78-144 BPM
         tempo = (((averageActivity - 0) * (1.2 - 0.65)) / (1 - 0)) + 0.65
@@ -208,21 +209,25 @@ def music(generatedName):
     # retrieving all files in directory PATH_CHORDS
     import glob
     main_directory = os.getcwd()
+    print(f'MAAWDAWD: {main_directory}')
     os.chdir(PATH_CHORDS+generatedName+"/")
     for file in glob.glob("*.mid"):
         print(f'file: {file}')
-        midi = EditMid(file, PATH_MUSIC+generatedName+"/", file,PATH_MUSIC+generatedName+"/") # po przecinku dopisz folder dla plików flac i nazwy tych plików
+        midi = EditMid(file, PATH_MUSIC2+generatedName+"/", file,PATH_MUSIC2+generatedName+"/") # po przecinku dopisz folder dla plików flac i nazwy tych plików
         midi.change_tempo(fctr=tempo,weight=averageWeight,key=key)
     #os.chdir(PATH_MUSIC+generatedName+"/")
     os.chdir(main_directory)
+    print(main_directory)
     os.chdir(PATH_MUSIC + generatedName)
+    print(main_directory)
+    print(PATH_MUSIC + generatedName)
     for file in glob.glob("*.mid"):
-        midi = EditMid(file, PATH_MUSIC+"/"+generatedName, file, PATH_MUSIC+"/")
+        midi = EditMid(file, PATH_MUSIC2+"/"+generatedName, file, PATH_MUSIC2+"/")
         #midi.export('F:/Python/NEW/MusiColorAI/DetectColors/soundfonts/full_grand_piano.sf2',PATH_MUSIC+"/"+generatedName+"/", generatedName)
-        midi.export('./soundfonts/full_grand_piano.sf2', PATH_MUSIC + "/" + generatedName + "/", generatedName)
+        midi.export('./soundfonts/full_grand_piano.sf2', PATH_MUSIC + generatedName + "/", generatedName)
 
     os.chdir(main_directory)
 
     # Delete temp dir
-    deleteOldDirectories(generatedName)
+    # deleteOldDirectories(generatedName)
     return averageHeat,averageActivity,averageActivity

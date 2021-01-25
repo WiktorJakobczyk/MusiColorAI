@@ -44,8 +44,10 @@ class EditMid:
         fs = FluidSynth(soundfont_path)
         #name=self.input_name
         #//nameFlac=name
-        print(f'TO: {name}')
-        fs.midi_to_audio(self.input_name, output + name + '.flac')
+        print(f'TO: {self.input_name}')
+        print(os.getcwd())
+        print(f'DO: {output+name+".flac"}')
+        fs.midi_to_audio(self.input_name, name + '.flac')
         #if extension == 'wav':
           #  os.system('ffmpeg -i' + self.output_flac_folder + name + '.flac ' + self.output_flac_folder + name + '.wav')
             #os.remove(self.output_flac_folder + name + '.flac')
