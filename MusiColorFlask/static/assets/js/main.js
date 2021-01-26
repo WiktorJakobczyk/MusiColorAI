@@ -18,6 +18,9 @@
 
   //=========================================================================
  function readURL(input) {
+   console.log('READ URL')
+
+
     if (input.files && input.files[0]) {
         var reader = new FileReader();
 
@@ -26,8 +29,14 @@
                 .attr('src', e.target.result);
         };
         reader.readAsDataURL(input.files[0]);
+           $("#imageResult").css({ opacity: 0})
+               $('#imageResult').fadeTo('slow',1, function() {
+               // scroll to
+      });
+
         document.getElementById('submitBtn').style.visibility = "visible";
         document.getElementById('image-areaId').style.maxHeight= "60%";
+
     }
 }
 
@@ -37,7 +46,52 @@ $(function () {
     });
 });
 
+ $(function () {
+    $('#uploadBtn').on('click', function () {
+        doAjaxRequest()
+    });
+});
+function doAjaxRequest() {
+console.log('Req ajax')
+var data=new FormData($("#form")[0]);
+
+ //  var scrollto =   $("#test").offset().top - scrolltoOffset;
+ // $('html, body').animate({
+ //          scrollTop: scrollto*0.7
+ //        }, 1500, 'easeInOutExpo');
+  $("#test").css({ opacity: 0})
+  $('#test').html('<div class="spinner-border align-items-center align-content-center justify-content-center align-self-center self m-auto d-block spinner-color"  role="status"><span class="sr-only">Loading...</span></div>')
+
+              $('#test').fadeTo('slow',1, function() {
+        });
+
+    $.ajax({ // create an AJAX call...
+        data: data, // get the form data
+        type: 'post', // GET or POST
+         processData: false,
+        contentType: false,
+        url: "/", // the file to call -- postcodecheck if you're on that same domain, otherwise ajaxActions.php
+        success: function(response) { // on success..
+          console.log(response)
+          $('#test').fadeOut('slow', function() {
+              $('#test').html(response).fadeIn('slow'); // update the DIV
+              // $('#test').delay(100).
+      });
+
+
+        // $('#test').html(response); // update the DIV
+        //      $('#test').animate({height:"120%"},400)
+        //      $('#test').animate({height:"100%"},400)
+        }
+    });
+}
+
+
 /*  ==========================================
+
+
+
+
     SHOW UPLOADED IMAGE NAME
 * ========================================== */
 var input = document.getElementById( 'upload' );

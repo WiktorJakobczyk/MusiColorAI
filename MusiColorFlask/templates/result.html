@@ -1,27 +1,33 @@
-<!doctype html>
-<html>
-  <head>
-    <title>MusiColorAI</title>
-	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles.css') }}">
-	<script type="text/javascript" src="{{ url_for('static', filename='scripts.js') }}"></script>
-  </head>
-  <body>
-    <h1>Wygenerowano muzykę</h1>
-	<div class="results">
-		<audio controls>
+<head>
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='result.css') }}">
+<link href="../static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="../static/assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+<link href="../static/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+<link href="../static/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+<link href="../static/assets/vendor/venobox/venobox.css" rel="stylesheet">
+<link href="../static/assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+<link href="../static/assets/vendor/aos/aos.css" rel="stylesheet">
+
+<!-- Template Main CSS File -->
+<link href="../static/assets/css/style.css" rel="stylesheet">
+</head>
+<div id="result" class="align-items-center align-content-center justify-content-center align-self-center self m-auto d-block">
+		<audio controls class="rounded mx-auto d-block align-content-center align-items-center">
 		<source src="http://127.0.0.1:5000/getmusic/{{flac_name}}" type="audio/flac">
 		Your browser does not support the audio element.
 		</audio>
 		<br>
-		<img width="300" height="300" src="http://127.0.0.1:5000/uploads/{{flac_name}}.jpg"/>
-		<br>
-		<img  src="http://127.0.0.1:5000/getplot/{{flac_name}}"/>
-		<br>
-		<label>Heat: {{data[0]}}</label>
-		<br>
-		<label>Activity: {{data[1]}}</label>
-		<br>
-		<label>Weight: {{data[2]}}</label>
+  <div>
+<!--		<img class="img-fluid rounded mx-auto d-block align-content-center align-items-center" src="http://127.0.0.1:5000/uploads/{{flac_name}}.jpg"/>-->
+
+		<img class="img-fluid rounded mx-auto d-block align-content-center align-items-center"  src="http://127.0.0.1:5000/getplot/{{flac_name}}"/>
 	</div>
-  </body>
-</html>
+		<br>
+	<div class="align-items-center align-content-center justify-content-center align-self-center self m-auto d-block">
+		<label class="rounded mx-auto d-block align-content-center align-items-center" style="text-align: center">Heat: {{data[0]}}%</label>
+		<br>
+		<label class="rounded mx-auto d-block align-content-center align-items-center" style="text-align: center">Activity: {{data[1]}}%</label>
+		<br>
+		<label class="rounded mx-auto d-block align-content-center align-items-center" style="text-align: center">Weight: {{data[2]}}%</label>
+	</div>
+</div>

@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Arsha Bootstrap Template - Index</title>
+  <title>MusiColorAI</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -71,7 +71,7 @@
           <h2>Our app allows you to experience the music created by colors.</h2>
           <div class="d-lg-flex">
             <a href="#services" class="btn-get-started scrollto">Get Started</a>
-            <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox btn-watch-video" data-vbtype="video" data-autoplay="true"> Watch Video <i class="icofont-play-alt-2"></i></a>
+            <a href="https://www.youtube.com/watch?v=wDgQdr8ZkTw&list=PLaSAJFZNxXNG2HpJxD62eIHnYbyn1lsp_" class="venobox btn-watch-video" data-vbtype="video" data-autoplay="true"> Watch Video <i class="icofont-play-alt-2"></i></a>
           </div>
         </div>
         <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
@@ -91,27 +91,40 @@
         <div class="row" data-aos="zoom-in">
 
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="../static/assets/img/logos/client-1.png" class="img-fluid" alt="">
+           <a target="_blank" rel="noopener noreferrer" href="https://www.python.org/">
+             <img src="../static/assets/img/logos/client-1.png" class="img-fluid" alt="">
+           </a>
           </div>
 
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="../static/assets/img/logos/client-2.png" class="img-fluid" alt="">
+             <a target="_blank" rel="noopener noreferrer" href="https://magenta.tensorflow.org/">
+              <img src="../static/assets/img/logos/client-2.png" class="img-fluid" alt="">
+             </a>
           </div>
 
+
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+             <a target="_blank" rel="noopener noreferrer" href="https://www.tensorflow.org/">
             <img src="../static/assets/img/logos/client-3.png" class="img-fluid" alt="">
+              </a>
           </div>
 
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+             <a target="_blank" rel="noopener noreferrer" href="https://global.abb/group/en">
             <img src="../static/assets/img/logos/client-4.png" class="img-fluid" alt="">
+                 </a>
           </div>
 
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+             <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
             <img src="../static/assets/img/logos/client-5.png" class="img-fluid" alt="">
+                 </a>
           </div>
 
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+             <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
             <img src="../static/assets/img/logos/client-6.png" class="img-fluid" alt="">
+                 </a>
           </div>
 
         </div>
@@ -274,32 +287,38 @@ To generate music click the
    button and wait a moment.</p>
         </div>
             <div class="icon-box">
+
               <div class="container py-5">
 
     <div class="row py-4">
         <div class="col-lg-6 mx-auto">
-       <form method="POST" action="" enctype="multipart/form-data">
+       <form id="form" method="POST" action="" enctype="multipart/form-data">
             <!-- Upload image input-->
             <div class="input-group mb-3 px-2 py-2 rounded-pill bg-white shadow-sm">
-                <input id="upload" type="file" onchange="readURL(this);" class="form-control border-0" accept="image/jpeg" name="file">
+                <input id="upload" type="file"  class="form-control border-0" accept="image/jpeg" name="file">
                 <label id="upload-label" type="file" for="upload" class="font-weight-light text-muted">Choose file</label>
                 <div class="input-group-append">
-                    <label for="upload" class="get-uplo-btn"> <i class="fa fa-cloud-upload mr-2 text-muted"></i><small class="text-uppercase font-weight-bold text-muted">Choose file</small></label>
+                    <label id="inputBtn"  for="upload" class="get-uplo-btn border-0"> <i class="fa fa-cloud-upload mr-2 text-muted"></i><small class="text-uppercase font-weight-bold ">Choose file</small></label>
                 </div>
             </div>
-
+   </form>
             <!-- Uploaded image area-->
 <!--            <p class="font-italic text-white text-center">The image uploaded will be rendered inside the box below.</p>-->
             <div id="image-areaId" class="image-area mt-4">
-              <img id="imageResult" src="#" alt="" class="img-fluid rounded shadow-sm mx-auto d-block align-content-center align-items-center">
-               <div class="get-gen-btn align-self-center "  id="submitBtn">
-               <button type="submit" id="uploadBtn" class="form-control border-0 bg-transparent"  value="Submit">Generate</button>
+              <img id="imageResult"  src="#" alt="" class="img-fluid rounded shadow-sm mx-auto d-block align-content-center align-items-center">
+               <div class="get-gen-btn align-self-center border-0"  id="submitBtn">
+               <button id="uploadBtn" class="form-control border-0 bg-transparent btn btn-primary shadow-none"   value="Submit">Generate</button>
                </div>
             </div>
-     </form>
+
+
         </div>
+
     </div>
+  <div id="test" class="row py-5 scrollto">
+              </div>
 </div>
+
 
             </div>
 
@@ -309,135 +328,6 @@ To generate music click the
       </div>
     </section><!-- End Services Section -->
 
-<!--    &lt;!&ndash; ======= Cta Section ======= &ndash;&gt;-->
-<!--    <section id="cta" class="cta">-->
-<!--      <div class="container" data-aos="zoom-in">-->
-
-<!--        <div class="row">-->
-<!--          <div class="col-lg-9 text-center text-lg-left">-->
-<!--            <h3>Call To Action</h3>-->
-<!--            <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>-->
-<!--          </div>-->
-<!--          <div class="col-lg-3 cta-btn-container text-center">-->
-<!--            <a class="cta-btn align-middle" href="#">Call To Action</a>-->
-<!--          </div>-->
-<!--        </div>-->
-
-<!--      </div>-->
-<!--    </section>&lt;!&ndash; End Cta Section &ndash;&gt;-->
-
-    <!-- ======= Portfolio Section ======= -->
-<!--    <section id="portfolio" class="portfolio">-->
-<!--      <div class="container" data-aos="fade-up">-->
-
-<!--        <div class="section-title">-->
-<!--          <h2>Portfolio</h2>-->
-<!--          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>-->
-<!--        </div>-->
-
-<!--        <ul id="portfolio-flters" class="d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">-->
-<!--          <li data-filter="*" class="filter-active">All</li>-->
-<!--          <li data-filter=".filter-app">App</li>-->
-<!--          <li data-filter=".filter-card">Card</li>-->
-<!--          <li data-filter=".filter-web">Web</li>-->
-<!--        </ul>-->
-
-<!--        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">-->
-
-<!--          <div class="col-lg-4 col-md-6 portfolio-item filter-app">-->
-<!--            <div class="portfolio-img"><img src="../static/assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt=""></div>-->
-<!--            <div class="portfolio-info">-->
-<!--              <h4>App 1</h4>-->
-<!--              <p>App</p>-->
-<!--              <a href="../static/assets/img/portfolio/portfolio-1.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="App 1"><i class="bx bx-plus"></i></a>-->
-<!--              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>-->
-<!--            </div>-->
-<!--          </div>-->
-
-<!--          <div class="col-lg-4 col-md-6 portfolio-item filter-web">-->
-<!--            <div class="portfolio-img"><img src="../static/assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt=""></div>-->
-<!--            <div class="portfolio-info">-->
-<!--              <h4>Web 3</h4>-->
-<!--              <p>Web</p>-->
-<!--              <a href="../static/assets/img/portfolio/portfolio-2.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>-->
-<!--              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>-->
-<!--            </div>-->
-<!--          </div>-->
-
-<!--          <div class="col-lg-4 col-md-6 portfolio-item filter-app">-->
-<!--            <div class="portfolio-img"><img src="../static/assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt=""></div>-->
-<!--            <div class="portfolio-info">-->
-<!--              <h4>App 2</h4>-->
-<!--              <p>App</p>-->
-<!--              <a href="../static/assets/img/portfolio/portfolio-3.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="App 2"><i class="bx bx-plus"></i></a>-->
-<!--              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>-->
-<!--            </div>-->
-<!--          </div>-->
-
-<!--          <div class="col-lg-4 col-md-6 portfolio-item filter-card">-->
-<!--            <div class="portfolio-img"><img src="../static/assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt=""></div>-->
-<!--            <div class="portfolio-info">-->
-<!--              <h4>Card 2</h4>-->
-<!--              <p>Card</p>-->
-<!--              <a href="../static/assets/img/portfolio/portfolio-4.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>-->
-<!--              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>-->
-<!--            </div>-->
-<!--          </div>-->
-
-<!--          <div class="col-lg-4 col-md-6 portfolio-item filter-web">-->
-<!--            <div class="portfolio-img"><img src="../static/assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt=""></div>-->
-<!--            <div class="portfolio-info">-->
-<!--              <h4>Web 2</h4>-->
-<!--              <p>Web</p>-->
-<!--              <a href="../static/assets/img/portfolio/portfolio-5.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>-->
-<!--              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>-->
-<!--            </div>-->
-<!--          </div>-->
-
-<!--          <div class="col-lg-4 col-md-6 portfolio-item filter-app">-->
-<!--            <div class="portfolio-img"><img src="../static/assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt=""></div>-->
-<!--            <div class="portfolio-info">-->
-<!--              <h4>App 3</h4>-->
-<!--              <p>App</p>-->
-<!--              <a href="../static/assets/img/portfolio/portfolio-6.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="App 3"><i class="bx bx-plus"></i></a>-->
-<!--              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>-->
-<!--            </div>-->
-<!--          </div>-->
-
-<!--          <div class="col-lg-4 col-md-6 portfolio-item filter-card">-->
-<!--            <div class="portfolio-img"><img src="../static/assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt=""></div>-->
-<!--            <div class="portfolio-info">-->
-<!--              <h4>Card 1</h4>-->
-<!--              <p>Card</p>-->
-<!--              <a href="../static/assets/img/portfolio/portfolio-7.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Card 1"><i class="bx bx-plus"></i></a>-->
-<!--              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>-->
-<!--            </div>-->
-<!--          </div>-->
-
-<!--          <div class="col-lg-4 col-md-6 portfolio-item filter-card">-->
-<!--            <div class="portfolio-img"><img src="../static/assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt=""></div>-->
-<!--            <div class="portfolio-info">-->
-<!--              <h4>Card 3</h4>-->
-<!--              <p>Card</p>-->
-<!--              <a href="../static/assets/img/portfolio/portfolio-8.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Card 3"><i class="bx bx-plus"></i></a>-->
-<!--              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>-->
-<!--            </div>-->
-<!--          </div>-->
-
-<!--          <div class="col-lg-4 col-md-6 portfolio-item filter-web">-->
-<!--            <div class="portfolio-img"><img src="../static/assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt=""></div>-->
-<!--            <div class="portfolio-info">-->
-<!--              <h4>Web 3</h4>-->
-<!--              <p>Web</p>-->
-<!--              <a href="../static/assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>-->
-<!--              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>-->
-<!--            </div>-->
-<!--          </div>-->
-
-<!--        </div>-->
-
-<!--      </div>-->
-<!--    </section>&lt;!&ndash; End Portfolio Section &ndash;&gt;-->
 
     <!-- ======= Team Section ======= -->
     <section id="team" class="team section-bg">
@@ -458,8 +348,8 @@ To generate music click the
                   <span>Student<br/>Software Developer</span>
 <!--                <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>-->
                 <div class="social">
-                  <a href=""><i class="ri-facebook-fill"></i></a>
-                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                  <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/milosz.kolodziejski"><i class="ri-facebook-fill"></i></a>
+                  <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/mi%C5%82osz-ko%C5%82odziejski-5691a9202/"> <i class="ri-linkedin-box-fill"></i> </a>
                 </div>
               </div>
             </div>
@@ -473,8 +363,8 @@ To generate music click the
                 <span>Student<br/>Software Developer</span>
 <!--                <p>Aut maiores voluptates amet et quis praesentium qui senda para</p>-->
                 <div class="social">
-                  <a href=""><i class="ri-facebook-fill"></i></a>
-                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                  <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/wiktor.jakobczyk.5"><i class="ri-facebook-fill"></i></a>
+                  <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/wiktor-jakobczyk99"> <i class="ri-linkedin-box-fill"></i> </a>
                 </div>
               </div>
             </div>
@@ -488,8 +378,8 @@ To generate music click the
                 <span>Student<br/>Software Developer</span>
 <!--                <p>Quisquam facilis cum velit laborum corrupti fuga rerum quia</p>-->
                 <div class="social">
-                  <a href=""><i class="ri-facebook-fill"></i></a>
-                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                  <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/mateusz.borowiec.965"><i class="ri-facebook-fill"></i></a>
+                  <a target="_blank" rel="noopener noreferrer" href=""> <i class="ri-linkedin-box-fill"></i> </a>
                 </div>
               </div>
             </div>
@@ -504,8 +394,8 @@ To generate music click the
                 <span>Head of Corporate Technology<br/>Center at ABB</span>
 <!--                <p>Dolorum tempora officiis odit laborum officiis et et accusamus</p>-->
                 <div class="social">
-                  <a href=""><i class="ri-facebook-fill"></i></a>
-                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                  <a target="_blank" rel="noopener noreferrer" href=""><i class="ri-facebook-fill"></i></a>
+                  <a target="_blank" rel="noopener noreferrer" href=""> <i class="ri-linkedin-box-fill"></i> </a>
                 </div>
               </div>
             </div>
@@ -519,8 +409,8 @@ To generate music click the
                 <span>Principal Software Developer,<br/>Group Leader at ABB</span>
 <!--                <p>Dolorum tempora officiis odit laborum officiis et et accusamus</p>-->
                 <div class="social">
-                  <a href=""><i class="ri-facebook-fill"></i></a>
-                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                  <a target="_blank" rel="noopener noreferrer" href=""><i class="ri-facebook-fill"></i></a>
+                  <a target="_blank" rel="noopener noreferrer" href=""> <i class="ri-linkedin-box-fill"></i> </a>
                 </div>
               </div>
             </div>

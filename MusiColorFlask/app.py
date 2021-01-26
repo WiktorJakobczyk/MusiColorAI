@@ -1,7 +1,6 @@
 import imghdr
 import os
-from flask import Flask, render_template, request, redirect, url_for, abort, \
-    send_from_directory, Response
+from flask import *
 from werkzeug.utils import secure_filename
 import DetectColors.main as music
 import uuid
@@ -62,10 +61,37 @@ def upload_files():
 
     #file = open(r'F:\Python\NEW\MusiColorAI\MusiColorFlask\test.py', 'r').read()
     #exec(file)
-    averageHeat, averageActivity, averageActivity=music.music(generatedName)
-    res=render_template('result.html', flac_name=generatedName, data=[averageHeat, averageActivity, averageActivity])
 
-    #return "GIT", 200
+    averageHeat, averageActivity, averageWight=music.music(generatedName)
+   # resp = make_response(render_template('result.html', flac_name=generatedName, data=[averageHeat, averageActivity, averageWight]))
+
+
+
+    test = getMusic(generatedName)
+    test2 =  getPlot(generatedName)
+
+
+    return make_response(render_template('result.html', flac_name=generatedName, data=[round(averageHeat*100), round(averageActivity*100), round(averageWight*100)]))
+    # print(f'test: {test}')
+    # print(f'test2: {test2}')
+    #
+    #
+    # return ('<div class="results"> \
+	# 	<audio controls> \
+	# 	<source src="http://127.0.0.1:5000/getmusic/{{'+generatedName+'}}" type="audio/flac"> \
+	# 	Your browser does not support the audio element. \
+	# 	</audio> \
+	# 	<br> \
+	# 	<img width="300" height="300" src="http://127.0.0.1:5000/uploads/{{'+generatedName+'}}.jpg"/> \
+	# 	<br> \
+	# 	<img  src="http://127.0.0.1:5000/getplot/{{'+generatedName+'}}"/> \
+	# 	<br> \
+	# 	<label>Heat: {'+averageHeat+'}</label> \
+	# 	<br> \
+	# 	<label>Activity: {'+averageActivity+'}</label> \
+	# 	<br> \
+	# 	<label>Weight: {'+generatedName+'}}</label> \
+	# </div>')
 
 # DELETE THIS
 ############################

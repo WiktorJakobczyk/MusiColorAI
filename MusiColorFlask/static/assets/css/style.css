@@ -1005,6 +1005,21 @@ section {
     top: 50%;
     left: 1rem;
     transform: translateY(-50%);
+
+}
+
+#inputBtn{
+    background-color: var(--main-blue);
+
+}
+#inputBtn:hover {
+    background-color: var(--main-pink);
+}
+#inputBtn .small{
+   color:#FFFFFF;
+}
+.spinner-color {
+  color: var(--main-pink)
 }
 
 .image-area {
@@ -2018,5 +2033,19 @@ section {
   #footer .credits {
     padding-top: 4px;
   }
+
 }
 
+#uploadBtn{
+   color:#FFFFFF;
+
+
+}
+
+#submitBtn{
+   background-color: var(--main-blue);
+
+}
+#submitBtn:hover{
+   background-color: var(--main-pink);
+}
