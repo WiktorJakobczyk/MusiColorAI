@@ -63,7 +63,8 @@ def upload_files():
     #file = open(r'F:\Python\NEW\MusiColorAI\MusiColorFlask\test.py', 'r').read()
     #exec(file)
     averageHeat, averageActivity, averageActivity=music.music(generatedName)
-    return render_template('result.html', flac_name=generatedName, data=[averageHeat, averageActivity, averageActivity])
+    res=render_template('result.html', flac_name=generatedName, data=[averageHeat, averageActivity, averageActivity])
+
     #return "GIT", 200
 
 # DELETE THIS

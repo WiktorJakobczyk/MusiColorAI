@@ -19,22 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="818a2494-e273-4fbe-848d-51fc7d957e54" name="Default Changelist" comment="Add color palette&#10;Support for several users at once&#10;FIXES">
-      <change beforePath="$PROJECT_DIR$/.idea/MusiColorAI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MusiColorAI.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="818a2494-e273-4fbe-848d-51fc7d957e54" name="Default Changelist" comment="Bootstrap update">
+      <change afterPath="$PROJECT_DIR$/MusiColorFlask/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CreateBundle.py" beforeDir="false" afterPath="$PROJECT_DIR$/CreateBundle.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DetectColors/EditMid.py" beforeDir="false" afterPath="$PROJECT_DIR$/DetectColors/EditMid.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DetectColors/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/DetectColors/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DetectColors/models/modelHappyLookback_rnn.mag" beforeDir="false" afterPath="$PROJECT_DIR$/DetectColors/models/modelHappyLookback_rnn.mag" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DetectColors/models/modelSadLookback_rnn.mag" beforeDir="false" afterPath="$PROJECT_DIR$/DetectColors/models/modelSadLookback_rnn.mag" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MusiColorFlask/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/MusiColorFlask/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MusiColorFlask/templates/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MusiColorFlask/templates/result.html" beforeDir="false" afterPath="$PROJECT_DIR$/MusiColorFlask/templates/result.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Teach.py" beforeDir="false" afterPath="$PROJECT_DIR$/Teach.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TeachHappy.py" beforeDir="false" afterPath="$PROJECT_DIR$/TeachHappy.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TeachSad.py" beforeDir="false" afterPath="$PROJECT_DIR$/TeachSad.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -266,7 +255,8 @@
       <workItem from="1611303128813" duration="4543000" />
       <workItem from="1611330608512" duration="451000" />
       <workItem from="1611434261762" duration="7104000" />
-      <workItem from="1611599505922" duration="18039000" />
+      <workItem from="1611599505922" duration="18189000" />
+      <workItem from="1611677344815" duration="1286000" />
     </task>
     <task id="LOCAL-00001" summary="Config.py">
       <created>1610478277839</created>
@@ -331,7 +321,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611243651858</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Bootstrap update">
+      <created>1611617665729</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1611617665729</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -359,7 +356,8 @@
     <MESSAGE value="Flask" />
     <MESSAGE value="Fixed not refreshing images" />
     <MESSAGE value="Add color palette&#10;Support for several users at once&#10;FIXES" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add color palette&#10;Support for several users at once&#10;FIXES" />
+    <MESSAGE value="Bootstrap update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bootstrap update" />
   </component>
   <component name="WindowStateProjectService">
     <state x="634" y="180" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1611169513282">
@@ -380,33 +378,33 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="739" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1610633490091" />
-    <state width="1877" height="213" key="GridCell.Tab.0.bottom" timestamp="1611612633868">
+    <state width="938" height="213" key="GridCell.Tab.0.bottom" timestamp="1611617729922">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="184" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1611331060002" />
     <state width="1493" height="284" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1536.824@-1920.0.1536.824" timestamp="1611263790922" />
-    <state width="1877" height="213" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1611612633868" />
+    <state width="938" height="213" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1611617729922" />
     <state width="1877" height="235" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1611445939201" />
-    <state width="1877" height="213" key="GridCell.Tab.0.center" timestamp="1611612633868">
+    <state width="938" height="213" key="GridCell.Tab.0.center" timestamp="1611617729922">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="184" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1611331060002" />
     <state width="1493" height="284" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1536.824@-1920.0.1536.824" timestamp="1611263790922" />
-    <state width="1877" height="213" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1611612633868" />
+    <state width="938" height="213" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1611617729922" />
     <state width="1877" height="235" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1611445939200" />
-    <state width="1877" height="213" key="GridCell.Tab.0.left" timestamp="1611612633868">
+    <state width="938" height="213" key="GridCell.Tab.0.left" timestamp="1611617729922">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="184" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1611331060002" />
     <state width="1493" height="284" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1536.824@-1920.0.1536.824" timestamp="1611263790922" />
-    <state width="1877" height="213" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1611612633868" />
+    <state width="938" height="213" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1611617729922" />
     <state width="1877" height="235" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1611445939200" />
-    <state width="1877" height="213" key="GridCell.Tab.0.right" timestamp="1611612633868">
+    <state width="938" height="213" key="GridCell.Tab.0.right" timestamp="1611617729922">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="184" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1611331060002" />
     <state width="1493" height="284" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1536.824@-1920.0.1536.824" timestamp="1611263790922" />
-    <state width="1877" height="213" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1611612633868" />
+    <state width="938" height="213" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1611617729922" />
     <state width="1877" height="235" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1611445939200" />
     <state x="184" y="86" key="MergeDialog" timestamp="1611266507914">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -419,10 +417,10 @@
     <state x="-1551" y="115" key="SettingsEditor/0.0.1920.1040/-1920.0.1536.824@-1920.0.1536.824" timestamp="1611263649003" />
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1611303162426" />
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1610633547741" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1611600010467">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1611617674404">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1611600010467" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1611617674404" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1611223916591" />
     <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1611266524141">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -447,6 +445,6 @@
     <SUITE FILE_PATH="coverage/MusiColorAI$EvaluateSad.coverage" NAME="EvaluateSad Coverage Results" MODIFIED="1611434714435" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MusiColorAI$Flask_.coverage" NAME="Flask  Coverage Results" MODIFIED="1611223497189" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MusiColorFlask" />
     <SUITE FILE_PATH="coverage/MusiColorAI$TeachSad.coverage" NAME="TeachSad Coverage Results" MODIFIED="1611434682142" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/MusiColorAI$app.coverage" NAME="app Coverage Results" MODIFIED="1611611349361" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MusiColorFlask" />
+    <SUITE FILE_PATH="coverage/MusiColorAI$app.coverage" NAME="app Coverage Results" MODIFIED="1611677351521" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MusiColorFlask" />
   </component>
 </project>

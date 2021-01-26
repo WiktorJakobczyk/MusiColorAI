@@ -1,0 +1,40 @@
+body
+{
+	background-color: darkslateblue;
+	color: ghostwhite;
+}
+h1 
+{
+	text-align: center;
+}
+form
+{
+	text-align: center;
+}
+input[type="file"] 
+{
+    display: none;
+}
+input[type="submit"]
+{
+	display: none;
+}
+.custom-file-upload 
+{
+    border: 2px solid #ccc;
+    display: inline-block;
+	background-color: grey;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+.results
+{
+	margin: auto;
+	width: 50%;
+}
+
+.hide{
+
+    display:none;
+}
