@@ -1,7 +1,11 @@
 import imghdr
 import os
+import shutil
+
 from flask import *
 from werkzeug.utils import secure_filename
+
+
 import DetectColors.main as music
 import uuid
 from flask_bootstrap import Bootstrap
@@ -10,9 +14,7 @@ app = Flask(__name__)
 Bootstrap(app)
 app.config['MAX_CONTENT_LENGTH'] = 2 * 1024 * 1024
 app.config['UPLOAD_EXTENSIONS'] = ['.jpg', '.png', '.gif']
-#app.config['UPLOAD_PATH'] = 'F:/Python/NEW/MusiColorAI/MusiColorFlask/static/uploads/'
 app.config['UPLOAD_PATH'] = './static/uploads/'
-#app.config['MUSIC_PATH'] = 'F:/Python/NEW/MusiColorAI/MusiColorFlask/static/'
 app.config['MUSIC_PATH'] = './static/'
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
@@ -24,10 +26,9 @@ def validate_image(stream):
         return None
     return '.' + (format if format != 'jpeg' else 'jpg')
 
-# No caching at all for API endpoints.
+
 @app.after_request
 def add_header(response):
-    # response.cache_control.no_store = True
     response.headers['Cache-Control'] = 'no-store, no-cache, must- revalidate, post-check=0, pre-check=0, max-age=0'
     response.headers['Pragma'] = 'no-cache'
     response.headers['Expires'] = '-1'
@@ -59,53 +60,12 @@ def upload_files():
             return "Invalid image", 400
         uploaded_file.save(os.path.join(app.config['UPLOAD_PATH'], generatedName + file_ext))
 
-    #file = open(r'F:\Python\NEW\MusiColorAI\MusiColorFlask\test.py', 'r').read()
-    #exec(file)
-
     averageHeat, averageActivity, averageWight=music.music(generatedName)
-   # resp = make_response(render_template('result.html', flac_name=generatedName, data=[averageHeat, averageActivity, averageWight]))
 
-
-
-    test = getMusic(generatedName)
-    test2 =  getPlot(generatedName)
-
-
+    thread_a = Compute(generatedName)
+    thread_a.start()
     return make_response(render_template('result.html', flac_name=generatedName, data=[round(averageHeat*100), round(averageActivity*100), round(averageWight*100)]))
-    # print(f'test: {test}')
-    # print(f'test2: {test2}')
-    #
-    #
-    # return ('<div class="results"> \
-	# 	<audio controls> \
-	# 	<source src="http://127.0.0.1:5000/getmusic/{{'+generatedName+'}}" type="audio/flac"> \
-	# 	Your browser does not support the audio element. \
-	# 	</audio> \
-	# 	<br> \
-	# 	<img width="300" height="300" src="http://127.0.0.1:5000/uploads/{{'+generatedName+'}}.jpg"/> \
-	# 	<br> \
-	# 	<img  src="http://127.0.0.1:5000/getplot/{{'+generatedName+'}}"/> \
-	# 	<br> \
-	# 	<label>Heat: {'+averageHeat+'}</label> \
-	# 	<br> \
-	# 	<label>Activity: {'+averageActivity+'}</label> \
-	# 	<br> \
-	# 	<label>Weight: {'+generatedName+'}}</label> \
-	# </div>')
 
-# DELETE THIS
-############################
-@app.route("/wav")
-def streamwav():
-    def generate():
-        with open("static/song.wav", "rb") as fwav:
-            data = fwav.read(1024)
-            while data:
-                yield data
-                data = fwav.read(1024)
-
-    return Response(generate(), mimetype="audio/x-wav")
-############################
 
 @app.route('/getmusic/<filename>')
 def getMusic(filename):
@@ -117,8 +77,22 @@ def getPlot(filename):
 
 @app.route('/uploads/<filename>')
 def upload(filename):
-
     return send_from_directory(app.config['UPLOAD_PATH'], filename)
+
+import time
+from threading import Thread
+class Compute(Thread):
+    def __init__(self, name):
+        Thread.__init__(self)
+        self.name=name
+
+    def run(self):
+        print("start")
+
+        time.sleep(600)        #Files are kept for 10 minutes
+        shutil.rmtree(app.config['MUSIC_PATH']+self.name)
+        os.remove(app.config['UPLOAD_PATH']+self.name+'.jpg')
+        print("done")
 
 
 if __name__ == "__main__":

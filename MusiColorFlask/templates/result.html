@@ -11,23 +11,75 @@
 <!-- Template Main CSS File -->
 <link href="../static/assets/css/style.css" rel="stylesheet">
 </head>
-<div id="result" class="align-items-center align-content-center justify-content-center align-self-center self m-auto d-block">
-		<audio controls class="rounded mx-auto d-block align-content-center align-items-center">
-		<source src="http://127.0.0.1:5000/getmusic/{{flac_name}}" type="audio/flac">
+<body>
+ <!-- Card -->
+             <!-- Content -->
+      <div class="container d-flex justify-content-center my-4">
+
+        <div id="mobile-box">
+          <!-- Card -->
+          <div class="card">
+
+            <!-- Card image -->
+            <div class="view">
+              <img class="card-img-top" src="http://127.0.0.1:5000/getplot/{{flac_name}}"
+                alt="Card image cap">
+              </a>
+            </div>
+
+            <!-- Card content -->
+            <div class="card-body text-center">
+
+          <audio class="rounded mx-auto d-block align-content-center align-items-center" controls autoplay>
+		<source src="http://127.0.0.1:5000/getmusic/{{flac_name}}" type="audio/flac" >
 		Your browser does not support the audio element.
 		</audio>
-		<br>
-  <div>
-<!--		<img class="img-fluid rounded mx-auto d-block align-content-center align-items-center" src="http://127.0.0.1:5000/uploads/{{flac_name}}.jpg"/>-->
+            </div>
+         <div class="align-items-center align-content-center justify-content-center align-self-center self m-auto d-block">
+             <div class="row">
+                   <div class="col-sm">
+                        <h5 class="h5 font-weight-bold">Heat:</h5>
+                   </div>
+                   <div class="col-sm">
+                      <label class="rounded" style="text-align: center">{{data[0]}}%</label>
+                   </div>
+             </div>
+             <div class="row">
+                   <div class="col-sm">
+                        <h5 class="h5 font-weight-bold">Activity:</h5>
+                   </div>
+                   <div class="col-sm">
+                      <label class="rounded" style="text-align: center">{{data[1]}}%</label>
+                   </div>
+             </div>
+             <div class="row">
+                   <div class="col-sm">
+                        <h5 class="h5 font-weight-bold">Weight:</h5>
+                   </div>
+                   <div class="col-sm">
+                      <label class="rounded" style="text-align: center">{{data[2]}}%</label>
+                   </div>
+             </div>
 
-		<img class="img-fluid rounded mx-auto d-block align-content-center align-items-center"  src="http://127.0.0.1:5000/getplot/{{flac_name}}"/>
+
+
+
 	</div>
+          </div>
+          <!-- Card -->
+
+
+        </div>
+
+      </div>
+      <!-- Content -->
 		<br>
-	<div class="align-items-center align-content-center justify-content-center align-self-center self m-auto d-block">
-		<label class="rounded mx-auto d-block align-content-center align-items-center" style="text-align: center">Heat: {{data[0]}}%</label>
-		<br>
-		<label class="rounded mx-auto d-block align-content-center align-items-center" style="text-align: center">Activity: {{data[1]}}%</label>
-		<br>
-		<label class="rounded mx-auto d-block align-content-center align-items-center" style="text-align: center">Weight: {{data[2]}}%</label>
-	</div>
+
+
+  <script src="../static/result.js"></script>
 </div>
+
+  <!-- Template Main JS File -->
+  <script src="../static/assets/js/main.js"></script>
+
+</body>
