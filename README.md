@@ -1,9 +1,9 @@
 ![logo](https://user-images.githubusercontent.com/57060628/105486374-aa877100-5cae-11eb-8131-885d0fdeb2f7.png)
 ## MusiColor
-This project is meant to create music from emotions that can be triggered by colours of a picture. It uses 2 models that can by trained; one is for sad music and the other is for happy music. Every image colours palette is specified by 3 values:
-Activity- means how vivid the colours are
-Heat- means how happy/sad they are
-and Weight- ??
+This project is meant to create music from emotions that can be triggered by colours of a picture.We use 2 models to generate melodies that allow us to create both happy and sad soundtracks. Every image colours palette is specified by 3 values:
+Activity- Specifies the level of colors’ intensitye
+Heat- Specifies the level of colors’cheerfulness
+and Weight- Defines the key of the generated music
 ## General info
 To run this program on your computer, you have to install PyCharm from jetbrains.com/pycharm/download. 
 Simply choose your operating system, click "Download", open downloaded file and follow instructions on the screen. 
