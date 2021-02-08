@@ -62,8 +62,8 @@ def upload_files():
 
     averageHeat, averageActivity, averageWight=music.music(generatedName)
 
-    thread_a = Compute(generatedName)
-    thread_a.start()
+    #thread_a = Compute(generatedName)
+    #thread_a.start()
     return make_response(render_template('result.html', flac_name=generatedName, data=[round(averageHeat*100), round(averageActivity*100), round(averageWight*100)]))
 
 
