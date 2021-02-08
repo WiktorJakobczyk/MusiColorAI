@@ -19,7 +19,7 @@ Then download files from this repository. Open a terminal in the root directory 
 * git clone https://github.com/WiktorJakobczyk/MusiColorAI.git <br/>
 
 </br>
-The project uses Python Flask. To run the application, run app.py. Then you can find the service in your browser at the url "http://127.0.0.1:5000/ " 
+The project uses Python Flask. To run the application, run app.py. <br/> Then you can find the service in your browser at the url "http://127.0.0.1:5000/" <br/>
 In config.py you can change all path locations. (Make sure you have folders created!)
 <br/>
 
