@@ -1,12 +1,11 @@
 <head>
-<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='result.css') }}">
-<link href="../static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <link href="../static/assets/vendor/icofont/icofont.min.css" rel="stylesheet">
 <link href="../static/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
 <link href="../static/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
 <link href="../static/assets/vendor/venobox/venobox.css" rel="stylesheet">
 <link href="../static/assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
 <link href="../static/assets/vendor/aos/aos.css" rel="stylesheet">
+<link href="../static/assets/css/circle.css" rel="stylesheet">
 
 <!-- Template Main CSS File -->
 <link href="../static/assets/css/style.css" rel="stylesheet">
@@ -28,7 +27,7 @@
             </div>
 
             <!-- Card content -->
-            <div class="card-body text-center">
+            <div class="">
 
           <audio class="rounded mx-auto d-block align-content-center align-items-center" controls autoplay>
 		<source src="http://127.0.0.1:5000/getmusic/{{flac_name}}" type="audio/flac" >
@@ -53,16 +52,53 @@
                    </div>
              </div>
              <div class="row">
-                   <div class="col-sm">
+                   <div class="col-sm" style="width: auto">
                         <h5 class="h5 font-weight-bold">Weight:</h5>
                    </div>
-                   <div class="col-sm">
-                      <label class="rounded" style="text-align: center">{{data[2]}}%</label>
+                   <div class="col-sm" style="width: auto" >
+                      <label class="rounded circle" style="text-align: center">{{data[2]}}%</label>
                    </div>
+
+
+             </div>
+ <div class="row">
+             <div class="col">
+                    <div class="c100 p{{data[0]}}">
+                    <span>{{data[0]}}%</span>
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                </div>
+                  <div class="w-100"></div>
+                <div class="span12 text-center">Heat</div>
              </div>
 
+                <div class="col">
+                    <div class="c100 p{{data[1]}}">
+                    <span>{{data[1]}}%</span>
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                </div>
+                  <div class="w-100"></div>
+                <div class="span12 text-center">Activity</div>
+             </div>
 
+                <div class="col">
+                    <div class="c100 p{{data[2]}}">
+                    <span>{{data[2]}}%</span>
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                </div>
+                  <div class="w-100"></div>
+                <div class="span12 text-center">Weight</div>
+             </div>
 
+ </div>
 
 	</div>
           </div>
@@ -76,7 +112,7 @@
 		<br>
 
 
-  <script src="../static/result.js"></script>
+
 </div>
 
   <!-- Template Main JS File -->

@@ -72,7 +72,7 @@ var data=new FormData($("#form")[0]);
         contentType: false,
         url: "/", // the file to call -- postcodecheck if you're on that same domain, otherwise ajaxActions.php
         success: function(response) { // on success..
-          console.log(response)
+          console.log("Response:"+response)
           $('#test').fadeOut('slow', function() {
               $('#test').html(response).fadeIn('slow'); // update the DIV
               // $('#test').delay(100).
@@ -82,7 +82,13 @@ var data=new FormData($("#form")[0]);
         // $('#test').html(response); // update the DIV
         //      $('#test').animate({height:"120%"},400)
         //      $('#test').animate({height:"100%"},400)
-        }
+        },
+         error: function(xhr, status, error) {
+           $('#test').fadeOut('slow', function() {
+              $('#test').html("<div class='align-items-center align-content-center justify-content-center align-self-center self m-auto d-block' style=\"color: #2dc7fb\"><h3>The file is too big</h3></div>").fadeIn('slow'); // update the DIV
+
+      });
+  }
     });
 }
 
@@ -107,14 +113,15 @@ function showFileName( event ) {
 
   // Smooth scroll for the navigation menu and links with .scrollto classes
   var scrolltoOffset = $('#header').outerHeight() - 2;
+
   $(document).on('click', '.nav-menu a, .mobile-nav a, .scrollto', function(e) {
-    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+    if (window.location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
       var target = $(this.hash);
       if (target.length) {
         e.preventDefault();
 
         var scrollto = target.offset().top - scrolltoOffset;
-        if ($(this).attr("href") == '#header') {
+        if ($(this).attr("href") === '#header') {
           scrollto = 0;
         }
 

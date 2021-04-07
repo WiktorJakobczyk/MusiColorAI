@@ -1,6 +1,7 @@
 import imghdr
 import os
 import shutil
+import logging
 
 from flask import *
 from werkzeug.utils import secure_filename
@@ -36,7 +37,9 @@ def add_header(response):
 
 @app.errorhandler(413)
 def too_large(e):
+    print(e)
     return "File is too large", 413
+    #return make_response(render_template('fileTooBig.html'))
 
 
 @app.route('/')
@@ -60,7 +63,11 @@ def upload_files():
             return "Invalid image", 400
         uploaded_file.save(os.path.join(app.config['UPLOAD_PATH'], generatedName + file_ext))
 
-    averageHeat, averageActivity, averageWight=music.music(generatedName)
+    try:
+        averageHeat, averageActivity, averageWight = music.music(generatedName)
+    except Exception as e:
+        logging.exception("Error occured while generating music" + e)
+        return "ERROR", 400
 
     #thread_a = Compute(generatedName)
     #thread_a.start()
@@ -71,9 +78,11 @@ def upload_files():
 def getMusic(filename):
     return send_from_directory(app.config['MUSIC_PATH']+filename, filename+'.flac', cache_timeout=0)
 
+
 @app.route('/getplot/<filename>')
 def getPlot(filename):
     return send_from_directory(app.config['MUSIC_PATH']+filename, 'plot.png', cache_timeout=0)
+
 
 @app.route('/uploads/<filename>')
 def upload(filename):
