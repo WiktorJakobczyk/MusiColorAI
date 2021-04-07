@@ -19,9 +19,7 @@ Then download files from this repository. Open a terminal in the root directory 
 * git clone https://github.com/WiktorJakobczyk/MusiColorAI.git <br/>
 
 </br>
-To create music open folder DetectColors and open file main.py. Create folder named images (inside DetectColors package)and put in it your picture. Then in 81 line in main.py put the name of your picture,
-and run the program. 
-Your sound file will be created in F:/tmp/music/ready/ 
+The project uses Python Flask. To run the application, run app.py. <br/> Then you can find the service in your browser at the url "http://127.0.0.1:5000/" <br/>
 In config.py you can change all path locations. (Make sure you have folders created!)
 <br/>
 
@@ -50,6 +48,7 @@ When you are done with the training, stop the Teach threads and run file CreateB
 **Music21**: pip install --upgrade music21 http://web.mit.edu/music21/ <br/>
 **pyfluidsynth**: pip install pyfluidsynth https://pypi.org/project/pyFluidSynth/  <br/>
 **fluidsynth(guide)**: https://ksvi.mff.cuni.cz/~dingle/2019/prog_1/python_music.html <br/>
+** Flask**: pip install -U Flask https://flask.palletsprojects.com/en/1.1.x/ <br/>
 
 
 	
