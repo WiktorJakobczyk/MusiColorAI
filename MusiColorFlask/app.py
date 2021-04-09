@@ -19,6 +19,7 @@ app.config['UPLOAD_PATH'] = './static/uploads/'
 app.config['MUSIC_PATH'] = './static/'
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
+
 def validate_image(stream):
     header = stream.read(512)
     stream.seek(0)
@@ -38,7 +39,11 @@ def add_header(response):
 @app.errorhandler(413)
 def too_large(e):
     print(e)
-    return "File is too large", 413
+    return Response(
+        "The response body goes here",
+        status=413,
+    )
+    #return "File is too large", 413
     #return make_response(render_template('fileTooBig.html'))
 
 
@@ -51,27 +56,30 @@ def index():
 
 @app.route('/', methods=['POST'])
 def upload_files():
-    generatedName = str(uuid.uuid4())
-    os.mkdir(app.config['MUSIC_PATH']+generatedName)
-
+    # Resize test
     uploaded_file = request.files['file']
+    generatedName = str(uuid.uuid4())
+
     filename = secure_filename(uploaded_file.filename)
     if filename != '':
         file_ext = os.path.splitext(filename)[1]
         if file_ext not in app.config['UPLOAD_EXTENSIONS'] or \
                 file_ext != validate_image(uploaded_file.stream):
             return "Invalid image", 400
+
+        os.mkdir(app.config['MUSIC_PATH'] + generatedName)
         uploaded_file.save(os.path.join(app.config['UPLOAD_PATH'], generatedName + file_ext))
 
     try:
-        averageHeat, averageActivity, averageWight = music.music(generatedName)
+        averageHeat, averageActivity, averageWeight = music.music(generatedName)
+        print(f'DEBUG: {averageHeat} {averageActivity} {averageWeight}')
     except Exception as e:
         logging.exception("Error occured while generating music" + e)
         return "ERROR", 400
 
     #thread_a = Compute(generatedName)
     #thread_a.start()
-    return make_response(render_template('result.html', flac_name=generatedName, data=[round(averageHeat*100), round(averageActivity*100), round(averageWight*100)]))
+    return make_response(render_template('result.html', flac_name=generatedName, data=[round(averageHeat*100), round(averageActivity*100), round(averageWeight*100)]))
 
 
 @app.route('/getmusic/<filename>')
@@ -104,5 +112,10 @@ class Compute(Thread):
         print("done")
 
 
+
+
+
+
 if __name__ == "__main__":
+    app.register_error_handler(413,too_large)
     app.run(debug=True)

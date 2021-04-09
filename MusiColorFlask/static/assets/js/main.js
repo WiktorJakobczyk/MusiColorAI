@@ -65,6 +65,7 @@ var data=new FormData($("#form")[0]);
               $('#test').fadeTo('slow',1, function() {
         });
 
+
     $.ajax({ // create an AJAX call...
         data: data, // get the form data
         type: 'post', // GET or POST
@@ -83,13 +84,17 @@ var data=new FormData($("#form")[0]);
         //      $('#test').animate({height:"120%"},400)
         //      $('#test').animate({height:"100%"},400)
         },
-         error: function(xhr, status, error) {
+         error: function(xhr) {
+          console.log(xhr)
+          console.log(xhr.code)
+          console.log(xhr.status)
            $('#test').fadeOut('slow', function() {
               $('#test').html("<div class='align-items-center align-content-center justify-content-center align-self-center self m-auto d-block' style=\"color: #2dc7fb\"><h3>The file is too big</h3></div>").fadeIn('slow'); // update the DIV
 
       });
   }
     });
+    return false;
 }
 
 

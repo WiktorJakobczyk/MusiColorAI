@@ -10,3 +10,5 @@
 /__pycache__/
 /.idea/
 /DetectColors/__pycache__/
+/venv/
+/magenta/

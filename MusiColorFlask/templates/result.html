@@ -17,7 +17,8 @@
 
         <div id="mobile-box">
           <!-- Card -->
-          <div class="card">
+<!--          <div class="card">-->
+          <div class="">
 
             <!-- Card image -->
             <div class="view">
@@ -35,67 +36,47 @@
 		</audio>
             </div>
          <div class="align-items-center align-content-center justify-content-center align-self-center self m-auto d-block">
-             <div class="row">
-                   <div class="col-sm">
-                        <h5 class="h5 font-weight-bold">Heat:</h5>
-                   </div>
-                   <div class="col-sm">
-                      <label class="rounded" style="text-align: center">{{data[0]}}%</label>
-                   </div>
-             </div>
-             <div class="row">
-                   <div class="col-sm">
-                        <h5 class="h5 font-weight-bold">Activity:</h5>
-                   </div>
-                   <div class="col-sm">
-                      <label class="rounded" style="text-align: center">{{data[1]}}%</label>
-                   </div>
-             </div>
-             <div class="row">
-                   <div class="col-sm" style="width: auto">
-                        <h5 class="h5 font-weight-bold">Weight:</h5>
-                   </div>
-                   <div class="col-sm" style="width: auto" >
-                      <label class="rounded circle" style="text-align: center">{{data[2]}}%</label>
-                   </div>
-
-
-             </div>
- <div class="row">
-             <div class="col">
-                    <div class="c100 p{{data[0]}}">
+             <br/>
+             <br/>
+ <div class="row align-items-center align-content-center justify-content-center">
+             <div class="col center" style="margin: 15px">
+                    <div class="c100 p{{data[0]}} pieBlue">
                     <span>{{data[0]}}%</span>
+                    <span style="margin-top: 100px">Heat</span>
                     <div class="slice">
                         <div class="bar"></div>
                         <div class="fill"></div>
                     </div>
                 </div>
                   <div class="w-100"></div>
-                <div class="span12 text-center">Heat</div>
+<!--                <div class="span12 text-center" style="color: var(&#45;&#45;main-blue) ">Heat</div>-->
              </div>
 
-                <div class="col">
-                    <div class="c100 p{{data[1]}}">
+
+                <div class="col center" style="margin: 15px">
+                    <div class="c100 p{{data[1]}} piePink">
                     <span>{{data[1]}}%</span>
+                        <span style="margin-top: 100px">Activity</span>
                     <div class="slice">
                         <div class="bar"></div>
                         <div class="fill"></div>
                     </div>
                 </div>
                   <div class="w-100"></div>
-                <div class="span12 text-center">Activity</div>
+<!--                <div class="span12 text-center">Activity</div>-->
              </div>
 
-                <div class="col">
-                    <div class="c100 p{{data[2]}}">
+                <div class="col center" style="margin: 15px">
+                    <div class="c100 p{{data[2]}} pieWeight">
                     <span>{{data[2]}}%</span>
+                          <span style="margin-top: 100px">Weight</span>
                     <div class="slice">
                         <div class="bar"></div>
                         <div class="fill"></div>
                     </div>
                 </div>
                   <div class="w-100"></div>
-                <div class="span12 text-center">Weight</div>
+<!--                <div class="span12 text-center">Weight</div>-->
              </div>
 
  </div>

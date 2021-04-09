@@ -2,7 +2,7 @@ import os
 from config import *
 
 class Generate:
-    def __init__(self,BUNDLE_PATH, CONFIG):
+    def __init__(self, BUNDLE_PATH, CONFIG):
         self.BUNDLE_PATH=BUNDLE_PATH
         self.CONFIG=CONFIG
 

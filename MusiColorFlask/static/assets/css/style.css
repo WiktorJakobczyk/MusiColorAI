@@ -11,7 +11,8 @@
 
 :root {
     --main-blue:#2dc7fb;
-    --main-pink:#ed239f
+    --main-pink:#ed239f;
+    --main-weigth: #5a5778
 }
 body {
   font-family: "Open Sans", sans-serif;

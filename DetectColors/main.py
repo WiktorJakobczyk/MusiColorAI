@@ -165,13 +165,13 @@ def music(generatedName):
     if averageHeat<=0.5:
         print(f'SAD Colors')
         #Generate('F:/Python/NEW/MusiColorAI/DetectColors/models/modelSadLookback_rnn.mag','lookback_rnn').generate("[60]",generatedName)
-        #Generate('../DetectColors/models/modelSadLookback_rnn.mag', 'lookback_rnn').generate("[60]", generatedName)
-        Generate('../DetectColors/models/attention_rnn.mag', 'lookback_rnn').generate("[60]", generatedName)
+        Generate('../DetectColors/models/modelSadLookback_rnn.mag', 'lookback_rnn').generate("[60]", generatedName)
+        #Generate('../DetectColors/models/attention_rnn.mag', 'lookback_rnn').generate("[60]", generatedName)
 
         # Tempo 78-144 BPM
         tempo = (((averageActivity - 0) * (1.2 - 0.65)) / (1 - 0)) + 0.65
-        index=int(averageWeight*10)
-        key =sadList[index]
+        index = int(averageWeight*10)
+        key = sadList[index]
 
     else:
         print(f'HAPPY Colors')
@@ -191,7 +191,7 @@ def music(generatedName):
     renameFiles(makeDirFromRelative(PATH_MELODY + generatedName) + "/", 'melody')
 
     # Add chords to generated melodies.
-    addChords(averageHeat,generatedName)
+    addChords(averageHeat, generatedName)
 
     #renameFiles(PATH_CHORDS+generatedName+"/", 'chord')
     renameFiles(makeDirFromRelative(PATH_CHORDS+generatedName) + "/", 'chord')
@@ -201,7 +201,7 @@ def music(generatedName):
     from DetectColors.EditMid import EditMid
 
 
-    print(f'tempo {tempo} "  " {120* tempo}')  # DEBUG ONLY
+    print(f'DEBUG: tempo {tempo} "  " {120* tempo}')  # DEBUG ONLY
 
 
 
@@ -209,25 +209,19 @@ def music(generatedName):
     # retrieving all files in directory PATH_CHORDS
     import glob
     main_directory = os.getcwd()
-    print(f'MAAWDAWD: {main_directory}')
     os.chdir(PATH_CHORDS+generatedName+"/")
     for file in glob.glob("*.mid"):
-        print(f'file: {file}')
         midi = EditMid(file, PATH_MUSIC2+generatedName+"/", file,PATH_MUSIC2+generatedName+"/") # po przecinku dopisz folder dla plików flac i nazwy tych plików
         midi.change_tempo(fctr=tempo,weight=averageWeight,key=key)
     #os.chdir(PATH_MUSIC+generatedName+"/")
     os.chdir(main_directory)
-    print(main_directory)
     os.chdir(PATH_MUSIC + generatedName)
-    print(main_directory)
-    print(PATH_MUSIC + generatedName)
     for file in glob.glob("*.mid"):
         midi = EditMid(file, PATH_MUSIC2+"/"+generatedName, file, PATH_MUSIC2+"/")
-        #midi.export('F:/Python/NEW/MusiColorAI/DetectColors/soundfonts/full_grand_piano.sf2',PATH_MUSIC+"/"+generatedName+"/", generatedName)
-        midi.export('./soundfonts/full_grand_piano.sf2', PATH_MUSIC + generatedName + "/", generatedName)
+        midi.export(soundfont_path='C:/Projects/MusiColorAI/DetectColors/soundfonts/full_grand_piano.sf2', output=PATH_MUSIC + generatedName + "/", name = generatedName)
 
     os.chdir(main_directory)
 
     # Delete temp dir
     # deleteOldDirectories(generatedName)
-    return averageHeat,averageActivity,averageActivity
+    return averageHeat,averageActivity,averageWeight
