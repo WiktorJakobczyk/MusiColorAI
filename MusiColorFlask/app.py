@@ -3,6 +3,7 @@ import os
 import shutil
 import logging
 
+from PIL import Image
 from flask import *
 from werkzeug.utils import secure_filename
 
@@ -13,7 +14,7 @@ from flask_bootstrap import Bootstrap
 
 app = Flask(__name__)
 Bootstrap(app)
-app.config['MAX_CONTENT_LENGTH'] = 2 * 1024 * 1024
+app.config['MAX_CONTENT_LENGTH'] = 4 * 1024 * 1024
 app.config['UPLOAD_EXTENSIONS'] = ['.jpg', '.png', '.gif']
 app.config['UPLOAD_PATH'] = './static/uploads/'
 app.config['MUSIC_PATH'] = './static/'
@@ -67,8 +68,15 @@ def upload_files():
                 file_ext != validate_image(uploaded_file.stream):
             return "Invalid image", 400
 
+        size = 512, 512
+        # Resize image
+        im = Image.open(uploaded_file)
+        # im.thumbnail(size, Image.BICUBIC)
+
+
         os.mkdir(app.config['MUSIC_PATH'] + generatedName)
-        uploaded_file.save(os.path.join(app.config['UPLOAD_PATH'], generatedName + file_ext))
+        im.save(os.path.join(app.config['UPLOAD_PATH'], generatedName + file_ext))
+        # uploaded_file.save(os.path.join(app.config['UPLOAD_PATH'], generatedName + file_ext))
 
     try:
         averageHeat, averageActivity, averageWeight = music.music(generatedName)

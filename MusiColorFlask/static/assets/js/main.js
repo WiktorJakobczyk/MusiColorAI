@@ -55,10 +55,10 @@ function doAjaxRequest() {
 console.log('Req ajax')
 var data=new FormData($("#form")[0]);
 
- //  var scrollto =   $("#test").offset().top - scrolltoOffset;
- // $('html, body').animate({
- //          scrollTop: scrollto*0.7
- //        }, 1500, 'easeInOutExpo');
+var scrollto =   $("#test").offset().top - scrolltoOffset;
+ $('html, body').animate({
+          scrollTop: scrollto*0.7
+        }, 1500, 'easeInOutExpo');
   $("#test").css({ opacity: 0})
   $('#test').html('<div class="spinner-border align-items-center align-content-center justify-content-center align-self-center self m-auto d-block spinner-color"  role="status"><span class="sr-only">Loading...</span></div>')
 
@@ -77,7 +77,12 @@ var data=new FormData($("#form")[0]);
           $('#test').fadeOut('slow', function() {
               $('#test').html(response).fadeIn('slow'); // update the DIV
               // $('#test').delay(100).
+
       });
+          var scrollto =   $("#test").offset().top*1.04;
+             $('html, body').animate({
+                      scrollTop: scrollto
+                    }, 1500, 'easeInOutExpo');
 
 
         // $('#test').html(response); // update the DIV

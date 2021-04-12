@@ -1,4 +1,7 @@
 import math
+from collections import Counter
+from operator import itemgetter
+
 from PIL import Image, ImageCms
 
 
@@ -7,22 +10,74 @@ class PiePalette:
     def RGB2HEX(color):
         return "#{:02x}{:02x}{:02x}".format(int(color[0]), int(color[1]), int(color[2]))
 
-    def get_colors(img, numcolors=8, resize=150):
+    def get_colors(img, numcolors = 8, resize = 150):
         # Resize image to speed up processing
-        img2 = img.copy()
-        img2.thumbnail((resize, resize))
-        palette = img2.convert('P', palette=Image.ADAPTIVE, colors=numcolors).getpalette()
-        temp= []
+        imgSrc = img
+        # imgSrc.thumbnail((resize, resize))
+        # palette = imgSrc.convert('P', palette=Image.ADAPTIVE, colors=numcolors).getpalette()
+        temp = []
 
+
+
+        # print(imgSrc.convert('P', palette=Image.ADAPTIVE, colors=numcolors).getcolors())
 
         z = 0
-        for i in range(numcolors):
-            dominant_color = palette[z*3:z*3+3]
-            #temp.append(RGB2HEX(dominant_color))
-            temp.append(dominant_color)
-            z += 1
 
-        return temp
+        #===================================
+        # original = img.copy()
+        # reduced = original.convert("P", palette=Image.WEB, colors=numcolors)  # convert to web palette (216 colors)
+        # palette = reduced.getpalette()  # get palette as [r,g,b,r,g,b,...]
+        # palette = [palette[3 * n:3 * n + 3] for n in range(256)]  # group 3 by 3 = [[r,g,b],[r,g,b],...]
+        # color_count = [(n, palette[m]) for n, m in reduced.getcolors()]
+        #
+        # print(sorted(color_count, key=itemgetter(0), reverse=True))
+        # print(color_count[:9])
+        #===================================
+
+        #===================================
+        from colorthief import ColorThief
+
+        color_thief = ColorThief(imgSrc)
+        palette = color_thief.get_palette(color_count=8)
+        print(f'Thief : {palette}')
+        dominant_color = color_thief.get_color(quality=10)
+        print(dominant_color)
+        #===================================
+
+        testImage = Image.open(imgSrc)
+
+
+
+
+        #===================================
+
+        print(f'Counter: {palette}')
+
+
+        # for i in range(numcolors):
+        #     print(f'I: {palette[i]}')
+        #     dominant_color = palette[z*3:z*3+3]
+        #     print(f'I2: {dominant_color}')
+        #     #temp.append(RGB2HEX(dominant_color))
+        #     temp.append(dominant_color)
+        #     z += 1
+        print(f'Debug: COlours: {temp}')
+
+        # unique_colors = set()
+        # im = Image.open(imgSrc)
+        # for i in range(im.size[0]):
+        #     for j in range(im.size[1]):
+        #         pixel = im.getpixel((i, j))
+        #         unique_colors.add(pixel)
+        #
+        # print(f'Debug: COlours: {len(unique_colors)}')
+        # temp = temp[:len(unique_colors)]
+
+        # palette2 = [palette[3 * n:3 * n + 3] for n in range(256)]  # group 3 by 3 = [[r,g,b],[r,g,b],...]
+        # color_count = [(n, palette2[m]) for n, m in im.convert('P', palette=Image.WEB, colors=numcolors).getcolors()]
+        # print(f'Color_count: {color_count}')
+        s = set(palette)
+        return list(s)
 
     #https://gist.github.com/manojpandey/f5ece715132c572c80421febebaf66ae
     def rgb2lab(inputColor):

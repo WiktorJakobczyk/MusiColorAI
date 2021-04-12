@@ -19,20 +19,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="818a2494-e273-4fbe-848d-51fc7d957e54" name="Default Changelist" comment="Files structure FIX">
-      <change afterPath="$PROJECT_DIR$/DetectColors/models/chord_pitches_improv.mag" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/MusiColorAI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MusiColorAI.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="818a2494-e273-4fbe-848d-51fc7d957e54" name="Default Changelist" comment="Redesign result.html&#10;Add too file handler">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DetectColors/AddChords.py" beforeDir="false" afterPath="$PROJECT_DIR$/DetectColors/AddChords.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DetectColors/Generate.py" beforeDir="false" afterPath="$PROJECT_DIR$/DetectColors/Generate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DetectColors/ColorChar.py" beforeDir="false" afterPath="$PROJECT_DIR$/DetectColors/ColorChar.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DetectColors/PiePalette.py" beforeDir="false" afterPath="$PROJECT_DIR$/DetectColors/PiePalette.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DetectColors/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/DetectColors/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MusiColorFlask/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/MusiColorFlask/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MusiColorFlask/static/assets/css/circle.css" beforeDir="false" afterPath="$PROJECT_DIR$/MusiColorFlask/static/assets/css/circle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MusiColorFlask/static/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/MusiColorFlask/static/assets/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MusiColorFlask/static/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/MusiColorFlask/static/assets/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MusiColorFlask/templates/inner-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/MusiColorFlask/templates/inner-page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MusiColorFlask/templates/result.html" beforeDir="false" afterPath="$PROJECT_DIR$/MusiColorFlask/templates/result.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -287,7 +280,8 @@
       <workItem from="1617944942417" duration="762000" />
       <workItem from="1617945716617" duration="4736000" />
       <workItem from="1617950466719" duration="50000" />
-      <workItem from="1617950527194" duration="14596000" />
+      <workItem from="1617950527194" duration="14869000" />
+      <workItem from="1618203645143" duration="16920000" />
     </task>
     <task id="LOCAL-00001" summary="Config.py">
       <created>1610478277839</created>
@@ -408,7 +402,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612816969221</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Redesign result.html&#10;Add too file handler">
+      <created>1617965795687</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1617965795687</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -443,14 +444,15 @@
     <MESSAGE value="FIXES" />
     <MESSAGE value="Video" />
     <MESSAGE value="Files structure FIX" />
-    <option name="LAST_COMMIT_MESSAGE" value="Files structure FIX" />
+    <MESSAGE value="Redesign result.html&#10;Add too file handler" />
+    <option name="LAST_COMMIT_MESSAGE" value="Redesign result.html&#10;Add too file handler" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/MusiColorAI$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1611166025378" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DetectColors" />
     <SUITE FILE_PATH="coverage/MusiColorAI$TeachSad.coverage" NAME="TeachSad Coverage Results" MODIFIED="1611434682142" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MusiColorAI$TeachHappy.coverage" NAME="TeachHappy Coverage Results" MODIFIED="1611434880667" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MusiColorAI$Flask_.coverage" NAME="Flask  Coverage Results" MODIFIED="1611223497189" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MusiColorFlask" />
-    <SUITE FILE_PATH="coverage/MusiColorAI$app__1_.coverage" NAME="app (1) Coverage Results" MODIFIED="1617965292226" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MusiColorFlask" />
+    <SUITE FILE_PATH="coverage/MusiColorAI$app__1_.coverage" NAME="app (1) Coverage Results" MODIFIED="1618221316409" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MusiColorFlask" />
     <SUITE FILE_PATH="coverage/MusiColorAI$melody_rnn_generate.coverage" NAME="melody_rnn_generate Coverage Results" MODIFIED="1617194755032" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/magenta/magenta/models/melody_rnn" />
     <SUITE FILE_PATH="coverage/MusiColorAI$test.coverage" NAME="test Coverage Results" MODIFIED="1617195077241" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MusiColorAI$EditMid.coverage" NAME="EditMid Coverage Results" MODIFIED="1610665300777" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DetectColors" />
