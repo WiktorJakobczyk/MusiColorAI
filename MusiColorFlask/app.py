@@ -50,7 +50,12 @@ def too_large(e):
 
 @app.route('/')
 def index():
+    # CO TO KURWA JEST
+    # zabezpieczenie przed przypadkowym usunięciem folderu './static/uploads/'
     music.makeDirFromRelative(app.config['UPLOAD_PATH'])
+    # ale to files ni chuja nie wiem po co
+    # to jest lista folderów w './static/uploads/'
+    # nie wiem po co to ma być w 'index.html'
     files = os.listdir(app.config['UPLOAD_PATH'])
     return render_template('index.html', files=files)
 
