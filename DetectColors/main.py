@@ -14,11 +14,11 @@ def getColorsFromImage(src, colours=8):
     return PiePalette.get_colors(src, numcolors=colours)
 
 
-def writeToCSV(csvSrc, coloursToGetData):
+def writeToCSV(csvSrc, coloursToGetData, valuesToGetData):
     f = open(csvSrc, "w+")
-    f.write("color\n")
-    for p in coloursToGetData:
-        f.write(f'{PiePalette.RGB2HEX(p)}\n')
+    f.write("color,values\n")
+    for p in range(len(coloursToGetData)):
+        f.write(f'{PiePalette.RGB2HEX(coloursToGetData[p])},{valuesToGetData[p][0]}\n')
     f.close()
 
 
@@ -27,27 +27,27 @@ def createPlot(src, rowTitle, ID):
     char.createChart(ID)
 
 
-def getImageEmotions(colours):
+def getImageEmotions(colours,values):
     coloursValues = []
     for i in range(len(colours)):
         T1, T2, T3 = PiePalette.happiness(PiePalette.rgb2lab(colours[i]))
         coloursValues.append([T1, T2, T3])
-        print(f'Acitvity: -> {T1} \n Weight: -> {T2} \n Heat: -> {T3} \n')  # DEBUG ONLY!!
+        print(f'Color: {colours[i]}\nAcitvity: -> {T1} \n Weight: -> {T2} \n Heat: -> {T3} \n Values: {values[i]}')  # DEBUG ONLY!!
     return coloursValues
 
 
-def getAverageValues(coloursValues):
+def getAverageValues(coloursValues, values):
     averageActivity_ = 0.0
     averageWeight_ = 0.0
     averageHeat_ = 0.0
-    for i in coloursValues:
-        averageActivity_ += i[0]
-        averageWeight_ += i[1]
-        averageHeat_ += i[2]
+    for i in range(len(coloursValues)):
+        averageActivity_ += coloursValues[i][0]*values[i][2]
+        averageWeight_ += coloursValues[i][1]*values[i][2]
+        averageHeat_ += coloursValues[i][2]*values[i][2]
 
-    averageActivity_ /= len(coloursValues)
-    averageWeight_ /= len(coloursValues)
-    averageHeat_ /= len(coloursValues)
+    averageActivity_ /= 100
+    averageWeight_ /= 100
+    averageHeat_ /= 100
 
     print(f'==========================')  # DEBUG ONLY!!
     print(f'avActivity: {averageActivity_}')  # DEBUG ONLY!!
@@ -90,13 +90,14 @@ def addChords(averageHeat, generatedName):
 
 
 def makeDirFromRelative(relative_path):
+    temp_path = relative_path
     if not os.path.exists(relative_path):
         if relative_path[:2] == './':
             relative_path = relative_path[2:]
         elif relative_path[:3] == '../':
             relative_path = relative_path[3:]
         os.makedirs(relative_path)
-    return relative_path
+    return temp_path
 
 
 # if __name__ == '__main__':
@@ -104,24 +105,24 @@ def music(generatedName):
     #  Open img, and get dominant colours from it
     #  Second parameter determines number of colors (default=8)
     # colours = getColorsFromImage("F:/Python/NEW/MusiColorAI/MusiColorFlask/static/uploads/"+generatedName+'.jpg')
-    colours = getColorsFromImage("../MusiColorFlask/static/uploads/" + generatedName + '.jpg')
+    colours, values = getColorsFromImage("../MusiColorFlask/static/uploads/" + generatedName + '.jpg')
 
     #  Create a CSV file
     #  It will be used later for drawing a pie plot in ColorChar class.
     # os.mkdir("F:/Python/NEW/MusiColorAI/DetectColors/charts/"+generatedName)
     os.makedirs("charts/" + generatedName)
     # writeToCSV("F:/Python/NEW/MusiColorAI/DetectColors/charts/"+generatedName+"/dataToChartDominate.csv", colours)
-    writeToCSV("./charts/" + generatedName + "/dataToChartDominate.csv", colours)
+    writeToCSV("./charts/" + generatedName + "/dataToChartDominate.csv", colours, values)
 
     print(colours)  # DEBUG ONLY!!
 
     # Create a plot
     # It helps visualize how image dominant colours looks like
     # createPlot("F:/Python/NEW/MusiColorAI/DetectColors/charts/"+generatedName+"/dataToChartDominate.csv", "color",generatedName)
-    createPlot("./charts/" + generatedName + "/dataToChartDominate.csv", "color", generatedName)
+    createPlot("./charts/" + generatedName + "/dataToChartDominate.csv", ["color", "values"], generatedName)
 
     # Contains 3 values (activity, weight and heat) for all colours from palette.
-    coloursValues = getImageEmotions(colours)
+    coloursValues = getImageEmotions(colours,values)
 
     # === DO USUNIECIA
     # Zakładamy, że activity określa 'tempo' to jak energiczny jest utwór
@@ -132,7 +133,7 @@ def music(generatedName):
     # ==============
 
     # Get average values from entire palette
-    averageActivity, averageWeight, averageHeat = getAverageValues(coloursValues)
+    averageActivity, averageWeight, averageHeat = getAverageValues(coloursValues,values)
 
     # Delete old midis
     # deleteOldFiles()
@@ -191,14 +192,18 @@ def music(generatedName):
     # renameFiles(PATH_MELODY+generatedName+"/", 'melody')
     renameFiles(makeDirFromRelative(PATH_MELODY + generatedName) + "/", 'melody')
 
+
+
+    # renameFiles(PATH_CHORDS+generatedName+"/", 'chord')
+    path = makeDirFromRelative(PATH_CHORDS + generatedName)
+    print(f'PAAATH: {path}')
+
     # Add chords to generated melodies.
     addChords(averageHeat, generatedName)
 
-    # renameFiles(PATH_CHORDS+generatedName+"/", 'chord')
-    renameFiles(makeDirFromRelative(PATH_CHORDS + generatedName) + "/", 'chord')
+    renameFiles(path + "/", 'chord')
 
     # Create mp3/wav with new tempo/low-pass filter
-    # TODO: temp and filter
     from DetectColors.EditMid import EditMid
 
     print(f'DEBUG: tempo {tempo} "  " {120 * tempo}')  # DEBUG ONLY
@@ -224,4 +229,12 @@ def music(generatedName):
     os.chdir(main_directory)
     # Delete temp dir
     # deleteOldDirectories(generatedName)
-    return averageHeat, averageActivity, averageWeight
+
+    # Create legend
+    legendColPer = []
+
+    for i in range(len(colours)):
+        legendColPer.append([ PiePalette.RGB2HEX(colours[i]), values[i][2]])
+    print(f'LEGEND: {legendColPer}')
+
+    return averageHeat, averageActivity, averageWeight, legendColPer

@@ -50,14 +50,9 @@ def too_large(e):
 
 @app.route('/')
 def index():
-    # PYTANIE: CO TO JEST
-    # zabezpieczenie przed przypadkowym usunięciem folderu './static/uploads/'
-    music.makeDirFromRelative(app.config['UPLOAD_PATH'])
-    # ale to files nie wiem po co
-    # to jest lista folderów w './static/uploads/'
-    # nie wiem po co to ma być w 'index.html'
-    files = os.listdir(app.config['UPLOAD_PATH'])
-    return render_template('index.html', files=files)
+    # music.makeDirFromRelative(app.config['UPLOAD_PATH'])
+    # files = os.listdir(app.config['UPLOAD_PATH'])
+    return render_template('index.html')
 
 
 @app.route('/', methods=['POST'])
@@ -76,23 +71,28 @@ def upload_files():
         size = 512, 512
         # Resize image
         im = Image.open(uploaded_file)
-        # im.thumbnail(size, Image.BICUBIC)
+        width, height = im.size
+        if width > 512 or height > 512:
+            im.thumbnail(size, Image.BICUBIC)
 
-
-        os.mkdir(app.config['MUSIC_PATH'] + generatedName)
+        os.makedirs(app.config['MUSIC_PATH'] + generatedName)  # TODO: FIX
         im.save(os.path.join(app.config['UPLOAD_PATH'], generatedName + file_ext))
         # uploaded_file.save(os.path.join(app.config['UPLOAD_PATH'], generatedName + file_ext))
 
     try:
-        averageHeat, averageActivity, averageWeight = music.music(generatedName)
+        averageHeat, averageActivity, averageWeight, legendColPer = music.music(generatedName)
         print(f'DEBUG: {averageHeat} {averageActivity} {averageWeight}')
+        return make_response(render_template('result.html', flac_name=generatedName,
+                                             data=[round(averageHeat * 100), round(averageActivity * 100),
+                                                   round(averageWeight * 100)],
+                                             legend=legendColPer))
     except Exception as e:
         logging.exception("Error occured while generating music" + e)
         return "ERROR", 400
 
     #thread_a = Compute(generatedName)
     #thread_a.start()
-    return make_response(render_template('result.html', flac_name=generatedName, data=[round(averageHeat*100), round(averageActivity*100), round(averageWeight*100)]))
+
 
 
 @app.route('/getmusic/<filename>')

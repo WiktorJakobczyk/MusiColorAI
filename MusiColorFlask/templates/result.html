@@ -25,6 +25,10 @@
               <img class="card-img-top" src="http://127.0.0.1:5000/getplot/{{flac_name}}"
                 alt="Card image cap">
               </a>
+                {%for i in range(6)%}
+                    <label style="color:{{legend[i][0]}}">{{legend[i][1]}}<br/></label>
+                {%endfor%}
+
             </div>
 
             <!-- Card content -->
@@ -97,6 +101,6 @@
 </div>
 
   <!-- Template Main JS File -->
-  <script src="../static/assets/js/main.js"></script>
+<!--  <script src="../static/assets/js/main.js"></script>-->
 
 </body>

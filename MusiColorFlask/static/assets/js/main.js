@@ -73,9 +73,8 @@ var scrollto =   $("#test").offset().top - scrolltoOffset;
         contentType: false,
         url: "/", // the file to call -- postcodecheck if you're on that same domain, otherwise ajaxActions.php
         success: function(response) { // on success..
-          console.log("Response:"+response)
           $('#test').fadeOut('slow', function() {
-              $('#test').html(response).fadeIn('slow'); // update the DIV
+              $('#test').empty().append(response).fadeIn('slow'); // update the DIV
               // $('#test').delay(100).
 
       });
@@ -83,18 +82,13 @@ var scrollto =   $("#test").offset().top - scrolltoOffset;
              $('html, body').animate({
                       scrollTop: scrollto
                     }, 1500, 'easeInOutExpo');
-
-
-        // $('#test').html(response); // update the DIV
-        //      $('#test').animate({height:"120%"},400)
-        //      $('#test').animate({height:"100%"},400)
         },
          error: function(xhr) {
           console.log(xhr)
           console.log(xhr.code)
           console.log(xhr.status)
            $('#test').fadeOut('slow', function() {
-              $('#test').html("<div class='align-items-center align-content-center justify-content-center align-self-center self m-auto d-block' style=\"color: #2dc7fb\"><h3>The file is too big</h3></div>").fadeIn('slow'); // update the DIV
+              $('#test').empty().append("<div class='align-items-center align-content-center justify-content-center align-self-center self m-auto d-block' style=\"color: #2dc7fb\"><h3>The file is too big</h3></div>").fadeIn('slow'); // update the DIV
 
       });
   }
