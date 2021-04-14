@@ -214,13 +214,14 @@ def music(generatedName):
     # os.chdir(PATH_MUSIC+generatedName+"/")
     os.chdir(main_directory)
     os.chdir(PATH_MUSIC + generatedName)
+    sf_path = main_directory[:-14] + "DetectColors\\soundfonts\\full_grand_piano.sf2"
+
     for file in glob.glob("*.mid"):
         midi = EditMid(file, PATH_MUSIC2 + "/" + generatedName, file, PATH_MUSIC2 + "/")
-        midi.export(soundfont_path='C:/Projects/MusiColorAI/DetectColors/soundfonts/full_grand_piano.sf2',
+        midi.export(soundfont_path=sf_path,
                     output=PATH_MUSIC + generatedName + "/", name=generatedName)
 
     os.chdir(main_directory)
-
     # Delete temp dir
     # deleteOldDirectories(generatedName)
     return averageHeat, averageActivity, averageWeight
