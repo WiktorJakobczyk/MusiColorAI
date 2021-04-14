@@ -9,8 +9,9 @@
 
 <!-- Template Main CSS File -->
 <link href="../static/assets/css/style.css" rel="stylesheet">
+
 </head>
-<body>
+<body">
  <!-- Card -->
              <!-- Content -->
       <div class="container d-flex justify-content-center my-4">
@@ -25,9 +26,11 @@
               <img class="card-img-top" src="http://127.0.0.1:5000/getplot/{{flac_name}}"
                 alt="Card image cap">
               </a>
-                {%for i in range(6)%}
-                    <label style="color:{{legend[i][0]}}">{{legend[i][1]}}<br/></label>
-                {%endfor%}
+             {%for i in range(size)%}
+
+                <label style="color:{{legend[i][0]}}">&bull;</label><label>{{legend[i][1]}} %<br/></label>
+
+             {%endfor%}
 
             </div>
 
@@ -35,7 +38,7 @@
             <div class="">
 
           <audio class="rounded mx-auto d-block align-content-center align-items-center" controls autoplay>
-		<source src="http://127.0.0.1:5000/getmusic/{{flac_name}}" type="audio/flac" >
+		    <source src="http://127.0.0.1:5000/getmusic/{{flac_name}}" type="audio/flac" >
 		Your browser does not support the audio element.
 		</audio>
             </div>

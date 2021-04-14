@@ -4,6 +4,7 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
+
 !(function($) {
   "use strict";
 
@@ -66,14 +67,25 @@ var scrollto =   $("#test").offset().top - scrolltoOffset;
         });
 
 
-    $.ajax({ // create an AJAX call...
+     var xhr = $.ajax({ // create an AJAX call...
         data: data, // get the form data
         type: 'post', // GET or POST
          processData: false,
         contentType: false,
+        cache: true,
         url: "/", // the file to call -- postcodecheck if you're on that same domain, otherwise ajaxActions.php
         success: function(response) { // on success..
+            console.log(response)
           $('#test').fadeOut('slow', function() {
+
+              //  console.log("FUUUNKCJA")
+              //  console.log(xhr.getResponseHeader('file_name'))
+              // window.caches.open("audio_file")
+              //
+              //   .then(cache => cache.add("http://127.0.0.1:5000/getmusic/"+xhr.getResponseHeader('file_name')))
+              //   .then(() => console.log('cached audio file'))
+              //   .catch(e => console.error('failed to cache file', e));
+
               $('#test').empty().append(response).fadeIn('slow'); // update the DIV
               // $('#test').delay(100).
 

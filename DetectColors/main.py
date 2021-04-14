@@ -9,16 +9,20 @@ from DetectColors.AddChords import Chords
 from DetectColors.PiePalette import PiePalette
 
 
-def getColorsFromImage(src, colours=8):
-    img = Image.open(src)
-    return PiePalette.get_colors(src, numcolors=colours)
+def getColorsFromImage(img, colours=9):
+
+    return PiePalette.get_colors(img, numcolors=colours)
 
 
 def writeToCSV(csvSrc, coloursToGetData, valuesToGetData):
+
+    # TODO: sort
+
     f = open(csvSrc, "w+")
     f.write("color,values\n")
     for p in range(len(coloursToGetData)):
-        f.write(f'{PiePalette.RGB2HEX(coloursToGetData[p])},{valuesToGetData[p][0]}\n')
+        if valuesToGetData[p][0]>0:
+            f.write(f'{PiePalette.RGB2HEX(coloursToGetData[p])},{valuesToGetData[p][0]}\n')
     f.close()
 
 
@@ -101,11 +105,11 @@ def makeDirFromRelative(relative_path):
 
 
 # if __name__ == '__main__':
-def music(generatedName):
+def music(generatedName, image):
     #  Open img, and get dominant colours from it
     #  Second parameter determines number of colors (default=8)
     # colours = getColorsFromImage("F:/Python/NEW/MusiColorAI/MusiColorFlask/static/uploads/"+generatedName+'.jpg')
-    colours, values = getColorsFromImage("../MusiColorFlask/static/uploads/" + generatedName + '.jpg')
+    colours, values = getColorsFromImage(image)
 
     #  Create a CSV file
     #  It will be used later for drawing a pie plot in ColorChar class.
@@ -234,7 +238,8 @@ def music(generatedName):
     legendColPer = []
 
     for i in range(len(colours)):
-        legendColPer.append([ PiePalette.RGB2HEX(colours[i]), values[i][2]])
+        if(values[i][2]>0.0):
+            legendColPer.append([ PiePalette.RGB2HEX(colours[i]), values[i][2]])
     print(f'LEGEND: {legendColPer}')
 
     return averageHeat, averageActivity, averageWeight, legendColPer

@@ -19,7 +19,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="818a2494-e273-4fbe-848d-51fc7d957e54" name="Default Changelist" comment="Chart and colors update&#10;FIX multiple requests error" />
+    <list default="true" id="818a2494-e273-4fbe-848d-51fc7d957e54" name="Default Changelist" comment="Chart and colors update&#10;FIX multiple requests error">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DetectColors/PiePalette.py" beforeDir="false" afterPath="$PROJECT_DIR$/DetectColors/PiePalette.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DetectColors/colorthiefTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/DetectColors/colorthiefTest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DetectColors/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/DetectColors/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MusiColorFlask/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/MusiColorFlask/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MusiColorFlask/static/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/MusiColorFlask/static/assets/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MusiColorFlask/templates/result.html" beforeDir="false" afterPath="$PROJECT_DIR$/MusiColorFlask/templates/result.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,6 +56,15 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="JupyterTrust" id="477327bb-9a60-4b0f-a8a1-3d5aba28d407" />
   <component name="ProjectId" id="1mkWgllU3OQTl2GnmzyQhZK35PH" />
@@ -279,6 +297,7 @@
       <workItem from="1618294462606" duration="6169000" />
       <workItem from="1618317213986" duration="7517000" />
       <workItem from="1618392291423" duration="196000" />
+      <workItem from="1618398513068" duration="13305000" />
     </task>
     <task id="LOCAL-00001" summary="Config.py">
       <created>1610478277839</created>
@@ -420,7 +439,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618392427966</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Chart and colors update&#10;FIX multiple requests error">
+      <created>1618398722270</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1618398722270</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -465,7 +491,7 @@
     <SUITE FILE_PATH="coverage/MusiColorAI$TeachSad.coverage" NAME="TeachSad Coverage Results" MODIFIED="1611434682142" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MusiColorAI$TeachHappy.coverage" NAME="TeachHappy Coverage Results" MODIFIED="1611434880667" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MusiColorAI$Flask_.coverage" NAME="Flask  Coverage Results" MODIFIED="1611223497189" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MusiColorFlask" />
-    <SUITE FILE_PATH="coverage/MusiColorAI$app__1_.coverage" NAME="app (1) Coverage Results" MODIFIED="1618324707362" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MusiColorFlask" />
+    <SUITE FILE_PATH="coverage/MusiColorAI$app__1_.coverage" NAME="app (1) Coverage Results" MODIFIED="1618411544466" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MusiColorFlask" />
     <SUITE FILE_PATH="coverage/MusiColorAI$melody_rnn_generate.coverage" NAME="melody_rnn_generate Coverage Results" MODIFIED="1617194755032" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/magenta/magenta/models/melody_rnn" />
     <SUITE FILE_PATH="coverage/MusiColorAI$test.coverage" NAME="test Coverage Results" MODIFIED="1617195077241" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MusiColorAI$EditMid.coverage" NAME="EditMid Coverage Results" MODIFIED="1610665300777" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DetectColors" />

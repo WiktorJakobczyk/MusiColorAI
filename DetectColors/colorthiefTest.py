@@ -36,7 +36,7 @@ class ColorThief2(object):
                      must implement `read()`, `seek()`, and `tell()` methods,
                      and be opened in binary mode.
         """
-        self.image = Image.open(file)
+        self.image = file
 
     def get_color(self, quality=10):
         """Get the dominant color.

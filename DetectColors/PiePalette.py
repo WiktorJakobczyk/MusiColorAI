@@ -10,14 +10,13 @@ class PiePalette:
     def RGB2HEX(color):
         return "#{:02x}{:02x}{:02x}".format(int(color[0]), int(color[1]), int(color[2]))
 
-    def get_colors(img, numcolors = 8, resize = 150):
+    def get_colors(img, numcolors = 9, resize = 150):
         # Resize image to speed up processing
         # imgSrc.thumbnail((resize, resize))
 
         from .colorthiefTest import ColorThief2
-
         color_thief = ColorThief2(img)
-        palette = color_thief.get_palette(color_count=8, quality=1)
+        palette = color_thief.get_palette(color_count=numcolors, quality=1)
 
         print(f'Thief : {palette}')
         print(f'Color :{color_thief.get_color(quality=1)}')
