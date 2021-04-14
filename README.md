@@ -52,6 +52,32 @@ Run files TeachHappy/Sad and EvaluateHappy/Sad. <br/>
 The first one will train your model, the other one will generate 10 sound files every 15 minutes. <br/>
 When you are done with the training, stop the Teach threads and run file CreateBundle to create file .mag that is used in DetectColors. <br/>
 Put newly trained models inside DetectColors/model and make sure that the names in main.py match (lines 112,115). <br/><br/>
+
+For CUDA cores availability, follow steps below:<br/>
+* Download CUDA Toolkit 11.0 (May 2020) from: <br/>
+  https://developer.nvidia.com/cuda-toolkit-archive <br/>
+* Install downloaded file <br/>
+* Check CUDA version in Command Prompt with: "nvcc -V" <br/>
+* Download CUDNN for CUDA 11.0 etc. (you have to be registered in NVIDIA developer program): <br/>
+  https://developer.nvidia.com/rdp/cudnn-archive <br/>
+* Unzip downloaded package
+* Copy files: <br/>
+  * cudnn*.dll from [extracted_folder]\cuda\bin to C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.0\bin <br/>
+  * cudnn*.dll from [extracted_folder]\cuda\include to C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.0\include <br/>
+  * cudnn*.lib from [extracted_folder]\cuda\lib\x64 to C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.0\lib\x64 <br/>
+  * add following environment variables: <br/>
+    * Open a command prompt from the Start menu. <br/>
+    * Type Run and hit Enter. <br/>
+    * Issue the control sysdm.cpl command. <br/>
+    * Select the Advanced tab at the top of the window. <br/>
+    * Click Environment Variables at the bottom of the window. <br/>
+    * Ensure the following values are set: <br/>
+      * Variable Name: CUDA_PATH  <br/>
+      * Variable Value: C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.0 <br/><br/>
+
+* Useful resources: <br/>
+  * https://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/index.html <br/>
+  * https://docs.nvidia.com/deeplearning/cudnn/install-guide/index.html <br/>
 	
 ## Technologies
 Project is created with:
