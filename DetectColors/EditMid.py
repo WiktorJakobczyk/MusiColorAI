@@ -46,8 +46,8 @@ class EditMid:
         #//nameFlac=name
         print(f'TO: {self.input_name}')
         print(os.getcwd())
-        print(f'DO: {output+name+".flac"}')
-        fs.midi_to_audio(self.input_name, name + '.flac')
+        print(f'DO: {output+name+".wav"}')
+        fs.midi_to_audio(self.input_name, name + '.wav')
         #if extension == 'wav':
           #  os.system('ffmpeg -i' + self.output_flac_folder + name + '.flac ' + self.output_flac_folder + name + '.wav')
             #os.remove(self.output_flac_folder + name + '.flac')

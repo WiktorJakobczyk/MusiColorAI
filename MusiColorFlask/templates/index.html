@@ -66,7 +66,7 @@
           <h1>See the sounds.<br/>Hear the colors.</h1>
           <h2>Our app allows you to experience the music created by colors.</h2>
           <div class="d-lg-flex">
-            <a href="#services" class="btn-get-started scrollto">Get Started</a>
+            <a href="#services" class="btn-get-started scrollto pb-2">Get Started</a>
             <a href="https://youtu.be/XQZKXCWu090" class="venobox btn-watch-video" data-vbtype="video" data-autoplay="true"> Watch Video <i class="icofont-play-alt-2"></i></a>
           </div>
         </div>
@@ -144,7 +144,7 @@
               <br/>The color palette's emotions are based on three scales:
             </p>
             <ul>
-              <li><i class="ri-check-double-line"></i> Heat: Specifies the level of colors’cheerfulness</li>
+              <li><i class="ri-check-double-line"></i> Heat: Specifies the level of colors’ cheerfulness</li>
               <li><i class="ri-check-double-line"></i> Activity: Specifies the level of colors’ intensity</li>
               <li><i class="ri-check-double-line"></i> Weight: Defines the key of the generated music </li>
             </ul>
@@ -270,59 +270,57 @@
 <!--    </section>&lt;!&ndash; End Skills Section &ndash;&gt;-->
 
     <!-- ======= Services Section ======= -->
-    <section id="services" class="services section-bg">
-      <div class="container" data-aos="fade-up">
-
+    <section class="services section-bg h-100">
+		<a id="services" style="display: block; position: relative; top: -62px; visibility: hidden;"></a>
+		<div class="container" data-aos="fade-up">
         <div class="section-title">
-          <h2>Get Started</h2>
-         <p>
-
-    To upload a jpg file, click the file
-    <span style="color: #2dc7fb">Choose File</span>
- button. You can only upload .jpg files. Then click the
-  <span style="color: #ed239f">Generate</span>
-   button and wait for the result.</p>
+			<h2 id="get_started">Get Started</h2>
+			<p>
+				To upload a jpg file, click the file
+				<span style="color: #2dc7fb">Browse</span>
+				button. You can only upload .jpg files. Then click the
+				<span style="color: #ed239f">Generate music</span>
+				button and wait for the result.
+			</p>
         </div>
-            <div class="icon-box">
-
-              <div class="container py-5">
-
-    <div class="row py-4">
+        <div class="icon-box">
+        <div class="container py-5">
+		<div class="row py-4">
         <div class="col-lg-6 mx-auto">
-       <form id="form" method="POST" action="" enctype="multipart/form-data">
+		<form id="form" method="POST" action="" enctype="multipart/form-data">
             <!-- Upload image input-->
-            <div class="input-group mb-3 px-2 py-2 rounded-pill bg-white shadow-sm">
-                <input id="upload" type="file"  class="form-control border-0" accept="image/jpeg" name="file">
-                <label id="upload-label" type="file" for="upload" class="font-weight-light text-muted">Choose file</label>
-                <div class="input-group-append">
-                    <label id="inputBtn"  for="upload" class="get-uplo-btn border-0"> <i class="fa fa-cloud-upload mr-2 text-muted"></i><small class="text-uppercase font-weight-bold ">Choose file</small></label>
+			<div class="input-group mb-3 px-2 py-2 rounded-pill bg-white shadow-sm">
+				<div class="custom-file">
+					<input oninput="document.getElementById('get_started').scrollIntoView({ behavior: 'smooth', block: 'start'}); console.log('oninput upload event working')" id="upload" type="file" class="form-control border-0" accept="image/jpeg" name="file">
+					<label id="upload-label" type="file" for="upload" class="font-weight-light text-muted">Choose file</label>
+				</div>
+                <div class="input-group-append align-bottom">
+                    <label id="inputBtn"  for="upload" class="get-uplo-btn mb-0 border-0" role="button">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cloud-arrow-up" viewBox="0 0 16 16">
+							<path fill-rule="evenodd" d="M7.646 5.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 6.707V10.5a.5.5 0 0 1-1 0V6.707L6.354 7.854a.5.5 0 1 1-.708-.708l2-2z"/>
+							<path d="M4.406 3.342A5.53 5.53 0 0 1 8 2c2.69 0 4.923 2 5.166 4.579C14.758 6.804 16 8.137 16 9.773 16 11.569 14.502 13 12.687 13H3.781C1.708 13 0 11.366 0 9.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383zm.653.757c-.757.653-1.153 1.44-1.153 2.056v.448l-.445.049C2.064 6.805 1 7.952 1 9.318 1 10.785 2.23 12 3.781 12h8.906C13.98 12 15 10.988 15 9.773c0-1.216-1.02-2.228-2.313-2.228h-.5v-.5C12.188 4.825 10.328 3 8 3a4.53 4.53 0 0 0-2.941 1.1z"/>
+						</svg>
+						<small class="text-uppercase font-weight-bold">Browse</small>
+					</label>
                 </div>
             </div>
-   </form>
+		</form>
             <!-- Uploaded image area-->
 <!--            <p class="font-italic text-white text-center">The image uploaded will be rendered inside the box below.</p>-->
             <div id="image-areaId" class="image-area mt-4">
-              <img id="imageResult"  src="#" alt="" class="img-fluid rounded shadow-sm mx-auto d-block align-content-center align-items-center">
-               <div class="get-gen-btn align-self-center border-0"  id="submitBtn">
-               <button id="uploadBtn" class="form-control border-0 bg-transparent btn btn-primary shadow-none"   value="Submit">Generate</button>
-               </div>
+				<img id="imageResult" src="#" alt="" class="img-fluid rounded shadow-sm mx-auto d-block align-content-center align-items-center">
+				<div class="get-gen-btn align-self-center border-0"  id="submitBtn">
+					<button id="uploadBtn" class="form-control border-0 bg-transparent btn btn-primary shadow-none" value="Submit">Generate music</button>
+				</div>
+				
             </div>
-
-
         </div>
-
-    </div>
-  <div id="test" class="row py-5 scrollto">
-  </div>
-</div>
-
-
-            </div>
-
-
-
-
-      </div>
+		</div>
+		<div id="test" class="row pb-5 scrollto">
+		</div>
+		</div>
+        </div>
+		</div>
     </section><!-- End Services Section -->
 
 
@@ -332,7 +330,8 @@
 
         <div class="section-title">
           <h2>Team</h2>
-          <p>Computer science students at the University of Lodz in cooperation with ABB (Asea Brown Boveri).<br/>Project created as part of the "Sztuczna Inteligencja w Muzyce" classes</p>
+          <p>Computer science students at the University of Lodz in cooperation with ABB (Asea Brown Boveri).<br/>
+		  Project created as part of the "Sztuczna Inteligencja w Muzyce" classes.</p>
         </div>
 
         <div class="row d-flex justify-content-center ">

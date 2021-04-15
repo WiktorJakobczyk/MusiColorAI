@@ -11,6 +11,17 @@ Every image colours palette is specified by 3 values:
 In order to run this program on your computer, you have to make a little setup (for Windows 10):<br/>
 * Install fluidsynth (this guide would be helpful): https://ksvi.mff.cuni.cz/~dingle/2019/prog_1/python_music.html <br/>
 * Rename 'FluidR3_GM.sf2' file to 'default.sf2' and place it in folder 'C:/soundfonts' <br/>
+* Install ffmpeg: <br/>
+  * Download 'ffmpeg-4.4-full_build.7z' from: https://www.gyan.dev/ffmpeg/builds/ <br/>
+  * Unpack folder 'ffmpeg-4.4-full_build' and rename it to 'ffmpeg' <br/>
+  * Paste that folder into 'C:\' <br/>
+  * Add that folder to PATH: <br/>
+    * Click on 'Start' and type: 'Advanced system settings', then press 'enter' <br/>
+	* Click 'Environment variables' button <br/>
+	* Under 'System variables' click on 'Path', then click 'Edit' <br/>
+	* Click 'New' button, then type or paste 'C:\ffmpeg\bin' and press 'enter' <br/>
+	* Confirm changes <br/>
+	* Install ffmpeg in Python: pip install ffmpeg <br/>
 * Install Python (tested on 3.7 and 3.8.5; during installation, remember to add Python to PATH): https://www.python.org/downloads/windows/ <br/>
 * Install Pycharm Professional IDE (tested on 2021.3.3): https://www.jetbrains.com/pycharm/download/#section=windows <br/>
   (other IDE should be fine, but you have to check for Flask support) <br/>

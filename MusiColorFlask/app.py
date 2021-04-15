@@ -113,7 +113,7 @@ def upload_files():
 
 @app.route('/getmusic/<filename>')
 def getMusic(filename):
-    return send_from_directory(app.config['MUSIC_PATH']+filename, filename+'.flac', cache_timeout=5)
+    return send_from_directory(app.config['MUSIC_PATH']+filename, filename+'.wav', cache_timeout=5)
 
 
 @app.route('/getplot/<filename>')
