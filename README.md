@@ -9,7 +9,7 @@ Every image colours palette is specified by 3 values:
 
 ## General info
 In order to run this program on your computer, you have to make a little setup (for Windows 10):<br/>
-* Install fluidsynth (this guide would be helpful): https://ksvi.mff.cuni.cz/~dingle/2019/prog_1/python_music.html <br/>
+* Install fluidsynth (this guide will be helpful): https://ksvi.mff.cuni.cz/~dingle/2019/prog_1/python_music.html <br/>
 * Rename 'FluidR3_GM.sf2' file to 'default.sf2' and place it in folder 'C:/soundfonts' <br/>
 * Install ffmpeg: <br/>
   * Download 'ffmpeg-4.4-full_build.7z' from: https://www.gyan.dev/ffmpeg/builds/ <br/>
@@ -32,7 +32,7 @@ In order to run this program on your computer, you have to make a little setup (
   * **Pillow**: pip install Pillow <br/>
   * **ColorThief**: pip install colorthief <br/>
   * **Pandas**: pip install pandas <br/>
-  * **Matplotlib**: pip install -U matplotlib <br/>
+  * **Matplotlib**: pip install matplotlib <br/>
   * **Midi2audio**: pip install midi2audio <br/>
   * **Music21**: pip install music21 <br/>
   * **pyfluidsynth**: pip install pyfluidsynth <br/>
