@@ -1,5 +1,7 @@
 import matplotlib.pyplot as plt
 import pandas as pd
+from matplotlib import rcParams
+
 from config import *
 
 class ColorChar:
@@ -24,9 +26,10 @@ class ColorChar:
 
     def createChart(self, ID):
         plt.pie(self.slices,
-                colors=self.kolory
+                colors=self.kolory,
+                radius=1.5
                 )
 
-        plt.savefig(PATH_MUSIC+ID+'/plot.png')
+        plt.savefig(PATH_MUSIC+ID+'/plot.png', transparent=True, bbox_inches=rcParams["savefig.bbox"])
         plt.close()
 

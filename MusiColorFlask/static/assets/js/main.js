@@ -50,6 +50,8 @@ $(function () {
  $(function () {
     $('#uploadBtn').on('click', function () {
         doAjaxRequest()
+      $('#uploadBtn').prop( "disabled", true );
+      $('#uploadBtn').html("Please wait");
     });
 });
 function doAjaxRequest() {
@@ -75,7 +77,6 @@ var scrollto =   $("#test").offset().top - scrolltoOffset;
         cache: true,
         url: "/", // the file to call -- postcodecheck if you're on that same domain, otherwise ajaxActions.php
         success: function(response) { // on success..
-            console.log(response)
           $('#test').fadeOut('slow', function() {
 
               //  console.log("FUUUNKCJA")
@@ -94,6 +95,9 @@ var scrollto =   $("#test").offset().top - scrolltoOffset;
              $('html, body').animate({
                       scrollTop: scrollto
                     }, 1500, 'easeInOutExpo');
+
+          $('#uploadBtn').prop( "disabled", false );
+             $('#uploadBtn').html("Generate music");
         },
          error: function(xhr) {
           console.log(xhr)

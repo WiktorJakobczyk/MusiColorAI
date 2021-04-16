@@ -1,8 +1,8 @@
 import imghdr
-import os
+import sys, os
+sys.path.append(os.getcwd())
 import shutil
 import logging
-
 from PIL import Image
 from flask import *
 from werkzeug.utils import secure_filename
@@ -86,6 +86,11 @@ def upload_files():
             averageHeat, averageActivity, averageWeight, legendColPer = music.music(generatedName, im)
             print(f'DEBUG: {averageHeat} {averageActivity} {averageWeight}')
 
+            legendColPer2 = []
+            legendColPer = [[num[0],round(num[1], 2)] for num in legendColPer]
+            for i in range(len(legendColPer)):
+                if (legendColPer[i][1] > 0.0):
+                    legendColPer2.append(legendColPer[i])
 
 
 
@@ -93,7 +98,7 @@ def upload_files():
                                                  data=[round(averageHeat * 100), round(averageActivity * 100),
                                                        round(averageWeight * 100)],
                                                  legend=legendColPer,
-                                                 size=len(legendColPer)
+                                                 size=len(legendColPer2)
                                                 ))
             res.headers["file_name"]=generatedName
 
