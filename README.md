@@ -29,16 +29,16 @@ In order to run this program on your computer, you have to make a little setup (
 * Clone this repository (simplest solution is cloning via GitHub Desktop) <br/>
 * In project main folder press right mouse button and select 'Open Folder as PyCharm Project' <br/>
 * Install required modules (if installing via PyCharm is not working, try installing via cmd):<br/>
-  * **Pillow**: pip install Pillow <br/>
-  * **ColorThief**: pip install colorthief <br/>
-  * **Pandas**: pip install pandas <br/>
-  * **Matplotlib**: pip install matplotlib <br/>
-  * **Midi2audio**: pip install midi2audio <br/>
-  * **Music21**: pip install music21 <br/>
-  * **pyfluidsynth**: pip install pyfluidsynth <br/>
-  * **Flask**: pip install Flask <br/>
-  * **Flask-Bootstrap**: pip install flask-bootstrap <br/>
-  * **Magenta** (in editable mode):
+  * **Pillow** (7.2.0): pip install Pillow <br/>
+  * **ColorThief**(0.2.1): pip install colorthief <br/>
+  * **Pandas**(1.2.3): pip install pandas <br/>
+  * **Matplotlib**(3.4.1): pip install matplotlib <br/>
+  * **Midi2audio**(0.1.1): pip install midi2audio <br/>
+  * **Music21**(6.7.1): pip install music21 <br/>
+  * **pyfluidsynth**(1.3.0): pip install pyfluidsynth <br/>
+  * **Flask**(1.1.2): pip install Flask <br/>
+  * **Flask-Bootstrap**(3.3.7.1): pip install flask-bootstrap <br/>
+  * **Magenta**(2.1.3) (in editable mode):
     * Press Alt + F12 to open terminal <br/>
     * git clone https://github.com/tensorflow/magenta.git <br/>
     * cd magenta <br/>
